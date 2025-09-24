@@ -1,0 +1,54 @@
+import { Facebook, Twitter, Instagram } from 'lucide-react';
+import Link from 'next/link';
+import { Logo } from '../Logo';
+import { Button } from '../ui/button';
+
+export function Footer() {
+  return (
+    <footer className="bg-secondary">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-1">
+            <Logo />
+            <p className="mt-4 text-muted-foreground text-sm">
+              Sowing seeds of hope, nurturing communities with compassion.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-bold tracking-wider uppercase mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
+              <li><Link href="/causes" className="text-muted-foreground hover:text-primary">Our Causes</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
+              <li><Link href="/donate" className="text-muted-foreground hover:text-primary">Donate</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold tracking-wider uppercase mb-4">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-bold tracking-wider uppercase mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <Button variant="ghost" size="icon" asChild>
+                <a href="#" aria-label="Facebook"><Facebook className="h-5 w-5 text-muted-foreground" /></a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="#" aria-label="Twitter"><Twitter className="h-5 w-5 text-muted-foreground" /></a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="#" aria-label="Instagram"><Instagram className="h-5 w-5 text-muted-foreground" /></a>
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Barakah Oasis. All rights reserved. A 501(c)(3) non-profit organization.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
