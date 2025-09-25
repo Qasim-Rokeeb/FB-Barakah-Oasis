@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { getCauseById } from '@/lib/actions';
+import { getCauseById, getAllCauses } from '@/lib/actions';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { formatCurrency } from '@/lib/utils';
 import CauseSummary from '@/components/CauseSummary';
@@ -86,8 +86,8 @@ export default async function CauseDetailPage({ params }: { params: { id: string
 }
 
 export async function generateStaticParams() {
-    const { causes } = await import('@/lib/data');
-    return causes.map((cause) => ({
-      id: cause.id,
-    }));
+  const causes = await getAllCauses();
+  return causes.map((cause) => ({
+    id: cause.id,
+  }));
 }

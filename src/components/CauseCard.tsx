@@ -54,7 +54,7 @@ export default function CauseCard({ cause }: CauseCardProps) {
       </CardContent>
       <CardFooter className="p-6 pt-0">
         <Button asChild className="w-full font-bold">
-          <Link href={`/causes/${cause.id}`}>Learn More & Donate</Link>
+          <Link href={`/donate?cause=${cause.id}`}>Learn More & Donate</Link>
         </Button>
       </CardFooter>
     </Card>

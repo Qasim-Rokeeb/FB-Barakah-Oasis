@@ -20,6 +20,11 @@ export const getSummary = cache(
   { revalidate: 3600 } // Cache for 1 hour
 );
 
+export async function getAllCauses(): Promise<Cause[]> {
+  // In a real app, this would fetch from a database
+  return causes;
+}
+
 export async function getCauseById(id: string): Promise<Cause | undefined> {
   // In a real app, this would fetch from a database
   return causes.find(cause => cause.id === id);
