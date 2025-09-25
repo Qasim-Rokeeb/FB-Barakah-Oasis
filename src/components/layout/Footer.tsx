@@ -46,7 +46,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Barakah Oasis. All rights reserved. A 501(c)(3) non-profit organization.</p>
+          <p>&copy; {new Date().getFullYear()} <span className="font-bold">Barakah Oasis</span>. All rights reserved. A 501(c)(3) non-profit organization.</p>
         </div>
       </div>
     </footer>
