@@ -27,9 +27,9 @@ export default function Home() {
           />
         )}
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        <div className="relative z-10 flex flex-col items-start justify-center h-full text-left px-4 md:px-12 lg:px-24">
           <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">Barakah Oasis</h1>
-          <p className="max-w-3xl text-lg md:text-xl text-primary-foreground/90 mb-8">
+          <p className="max-w-2xl text-lg md:text-xl text-primary-foreground/90 mb-8">
             Sowing seeds of hope, nurturing communities with compassion. Your generosity can create an oasis of blessings.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
