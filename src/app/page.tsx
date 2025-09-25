@@ -28,7 +28,7 @@ export default function Home() {
         )}
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex flex-col items-start justify-center h-full text-left px-4 md:px-12 lg:px-24">
-          <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">Barakah Oasis</h1>
+          <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight"><span className="font-bold">Barakah Oasis</span></h1>
           <p className="max-w-2xl text-lg md:text-xl text-primary-foreground/90 mb-8">
             Sowing seeds of hope, nurturing communities with compassion. Your generosity can create an oasis of blessings.
           </p>
@@ -49,7 +49,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-primary-900">Our Mission</h2>
             <p className="text-lg text-muted-foreground mb-12">
-              Barakah Oasis is dedicated to providing relief, support, and sustainable solutions to communities in need. We believe in the power of collective action to bring about positive change and restore dignity.
+              <span className="font-bold">Barakah Oasis</span> is dedicated to providing relief, support, and sustainable solutions to communities in need. We believe in the power of collective action to bring about positive change and restore dignity.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -134,7 +134,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Ready to Make a Change?</h2>
           <p className="max-w-2xl mx-auto text-lg text-primary-foreground/90 mb-8">
-            Your contribution, no matter the size, has the power to transform lives. Join the Barakah Oasis family today.
+            Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>
           <Button asChild size="lg" variant="secondary" className="font-bold text-foreground hover:bg-white/90">
             <Link href="/donate">Donate Now</Link>

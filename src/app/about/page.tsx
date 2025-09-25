@@ -17,7 +17,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">About Barakah Oasis</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">About <span className="font-bold">Barakah Oasis</span></h1>
           <p className="text-lg text-muted-foreground">
             Learn about our journey, our values, and the dedicated team working to make a difference in the world.
           </p>
@@ -71,7 +71,7 @@ export default function AboutPage() {
         <section className="mb-24 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold font-headline mb-6">Our Story</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Barakah Oasis was founded in 2015 by a small group of individuals who were moved by the immense suffering they witnessed during a humanitarian trip. They returned with a simple yet powerful conviction: that small, consistent acts of kindness, when multiplied, could create an "oasis" of blessings (Barakah) in the most desolate of circumstances. From delivering a few food parcels, we have grown into a global family of donors and volunteers, touching thousands of lives through diverse projects. Our core belief remains unchanged: every life has immense value, and together, we can restore hope and dignity.
+            <span className="font-bold">Barakah Oasis</span> was founded in 2015 by a small group of individuals who were moved by the immense suffering they witnessed during a humanitarian trip. They returned with a simple yet powerful conviction: that small, consistent acts of kindness, when multiplied, could create an "oasis" of blessings (Barakah) in the most desolate of circumstances. From delivering a few food parcels, we have grown into a global family of donors and volunteers, touching thousands of lives through diverse projects. Our core belief remains unchanged: every life has immense value, and together, we can restore hope and dignity.
           </p>
         </section>
 
