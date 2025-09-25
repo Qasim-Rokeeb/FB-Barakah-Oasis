@@ -30,7 +30,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-start justify-center h-full text-left px-4 md:px-12 lg:px-24">
           <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight"><span className="font-bold">Barakah Oasis</span></h1>
           <p className="max-w-2xl text-lg md:text-xl text-primary-foreground/90 mb-8">
-            Sowing seeds of hope, nurturing communities with compassion. Your generosity can create an oasis of blessings.
+            Sowing seeds of hope, nurturing communities with compassion. Your generosity can create an oasis of blessings for the Ummah.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="font-bold">
@@ -49,7 +49,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-primary-900">Our Mission</h2>
             <p className="text-lg text-muted-foreground mb-12">
-              <span className="font-bold">Barakah Oasis</span> is dedicated to providing relief, support, and sustainable solutions to communities in need. We believe in the power of collective action to bring about positive change and restore dignity.
+              <span className="font-bold">Barakah Oasis</span> is dedicated to serving the Ummah by providing relief, support, and sustainable solutions to Muslim communities in need. We believe in the power of collective action, inspired by Islamic principles, to bring about positive change and restore dignity.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -58,21 +58,21 @@ export default function Home() {
                 <HelpingHand className="h-10 w-10 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Provide Aid</h3>
-              <p className="text-muted-foreground">Delivering essential resources like food, water, and shelter to those affected by crisis.</p>
+              <p className="text-muted-foreground">Delivering essential resources like food, water, and shelter to those affected by crisis, fulfilling our duty of Sadaqah.</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-primary/20 rounded-full p-4 mb-4">
                 <Leaf className="h-10 w-10 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Empower Futures</h3>
-              <p className="text-muted-foreground">Creating long-term solutions through education, vocational training, and sustainable projects.</p>
+              <p className="text-muted-foreground">Creating long-term solutions through education and skill development, fostering self-reliance within communities.</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-primary/20 rounded-full p-4 mb-4">
                 <HeartHandshake className="h-10 w-10 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Build Community</h3>
-              <p className="text-muted-foreground">Fostering a sense of belonging and support, connecting donors with impactful causes.</p>
+              <p className="text-muted-foreground">Fostering a sense of brotherhood and sisterhood, connecting donors with impactful causes within the Ummah.</p>
             </div>
           </div>
         </div>
