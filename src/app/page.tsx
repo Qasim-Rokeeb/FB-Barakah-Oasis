@@ -31,7 +31,7 @@ export default function Home() {
         <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4">
               <div className="max-w-2xl text-left">
-                <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight"><span className="font-bold">Barakah Oasis</span></h1>
+                <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">Barakah Oasis</h1>
                 <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
                     Sowing seeds of hope, nurturing communities with compassion. Your generosity can create an oasis of blessings for the Ummah.
                 </p>
