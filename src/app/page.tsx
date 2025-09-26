@@ -49,21 +49,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
               <div className="bg-primary/20 rounded-full p-4 mb-4">
-                <HelpingHand className="h-10 w-10 text-primary" />
+                <HelpingHand className="h-12 w-12 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Provide Aid</h3>
               <p className="text-muted-foreground">Delivering essential resources like food, water, and shelter to those affected by crisis, fulfilling our duty of Sadaqah.</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-primary/20 rounded-full p-4 mb-4">
-                <Leaf className="h-10 w-10 text-primary" />
+                <Leaf className="h-12 w-12 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Empower Futures</h3>
               <p className="text-muted-foreground">Creating long-term solutions through education and skill development, fostering self-reliance within communities.</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-primary/20 rounded-full p-4 mb-4">
-                <HeartHandshake className="h-10 w-10 text-primary" />
+                <HeartHandshake className="h-12 w-12 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-2">Build Community</h3>
               <p className="text-muted-foreground">Fostering a sense of brotherhood and sisterhood, connecting donors with impactful causes within the Ummah.</p>
