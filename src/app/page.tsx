@@ -37,7 +37,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild size="lg" className="font-bold">
-                    <Link href="/donate">Donate Now</Link>
+                      <Link href="/donate">Donate Now</Link>
                     </Button>
                     <Button asChild variant="secondary" size="lg" className="font-bold">
                     <Link href="/causes">Our Causes</Link>
