@@ -40,7 +40,7 @@ export default function Home() {
                       <Link href="/donate">Donate Now</Link>
                     </Button>
                     <Button asChild variant="secondary" size="lg" className="font-bold">
-                    <Link href="/causes">Our Causes</Link>
+                    <Link href="/contact">Volunteer</Link>
                     </Button>
                 </div>
               </div>
