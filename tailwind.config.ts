@@ -56,6 +56,9 @@ export default {
         espresso: {
           DEFAULT: 'hsl(var(--espresso))',
         },
+        clay: {
+          DEFAULT: 'hsl(var(--clay))',
+        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

@@ -18,17 +18,17 @@ export function Footer() {
           <div>
             <h3 className="font-bold tracking-wider uppercase mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-primary-foreground/80 hover:text-primary-foreground">About Us</Link></li>
-              <li><Link href="/causes" className="text-primary-foreground/80 hover:text-primary-foreground">Our Causes</Link></li>
-              <li><Link href="/contact" className="text-primary-foreground/80 hover:text-primary-foreground">Contact</Link></li>
-              <li><Link href="/donate" className="text-primary-foreground/80 hover:text-primary-foreground">Donate</Link></li>
+              <li><Link href="/about" className="text-primary-foreground/80 hover:text-clay">About Us</Link></li>
+              <li><Link href="/causes" className="text-primary-foreground/80 hover:text-clay">Our Causes</Link></li>
+              <li><Link href="/contact" className="text-primary-foreground/80 hover:text-clay">Contact</Link></li>
+              <li><Link href="/donate" className="text-primary-foreground/80 hover:text-clay">Donate</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-bold tracking-wider uppercase mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground">Terms of Service</Link></li>
+              <li><Link href="#" className="text-primary-foreground/80 hover:text-clay">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-primary-foreground/80 hover:text-clay">Terms of Service</Link></li>
             </ul>
           </div>
           <div>
