@@ -33,7 +33,7 @@ export default function Home() {
               <div className="max-w-2xl text-left">
                 <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">Barakah Oasis</h1>
                 <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
-                    Sowing seeds of hope, nurturing communities with compassion. Your generosity can create an oasis of blessings for the Ummah.
+                    A serene and inviting charity website to highlight causes and facilitate community support.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild size="lg" className="font-bold">
