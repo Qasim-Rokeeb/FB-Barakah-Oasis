@@ -16,20 +16,9 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] min-h-[500px] text-white">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
-            fill
-            className="object-cover"
-            priority
-          />
-        )}
-        <div className="absolute inset-0 bg-black/50" />
+      <section className="relative w-full text-white bg-gradient-to-br from-primary to-accent">
         <div className="relative z-10 h-full flex items-center">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 py-24 md:py-32">
               <div className="max-w-2xl text-left">
                 <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">Barakah Oasis</h1>
                 <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
