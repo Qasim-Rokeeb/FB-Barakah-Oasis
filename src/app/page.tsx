@@ -1,4 +1,5 @@
 
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, HeartHandshake, HelpingHand, Leaf } from 'lucide-react';

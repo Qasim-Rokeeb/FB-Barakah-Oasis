@@ -1,3 +1,4 @@
+
 import { getSummary } from '@/lib/actions';
 
 type CauseSummaryProps = {
