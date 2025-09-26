@@ -127,10 +127,10 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-accent text-accent-foreground">
+      <section className="bg-accent text-white">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Ready to Make a Change?</h2>
-          <p className="max-w-2xl mx-auto text-lg text-accent-foreground/90 mb-8">
+          <p className="max-w-2xl mx-auto text-lg text-white/90 mb-8">
             Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
