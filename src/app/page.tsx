@@ -114,8 +114,10 @@ export default function Home() {
                       </Avatar>
                     )}
                     <blockquote className="text-muted-foreground mb-4 italic">"{testimonial.quote}"</blockquote>
-                    <p className="font-bold">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                    <cite className="not-italic">
+                      <p className="font-bold">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                    </cite>
                   </CardContent>
                 </Card>
               );
