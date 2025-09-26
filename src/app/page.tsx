@@ -127,17 +127,17 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-primary text-primary-foreground">
+      <section className="bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Ready to Make a Change?</h2>
-          <p className="max-w-2xl mx-auto text-lg text-primary-foreground/90 mb-8">
+          <p className="max-w-2xl mx-auto text-lg text-accent-foreground/90 mb-8">
             Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary" className="font-bold text-foreground hover:bg-white/90">
+            <Button asChild size="lg" variant="primary" className="font-bold">
                 <Link href="/donate">Donate Now</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="font-bold bg-transparent text-white border-white hover:bg-white hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="font-bold bg-transparent text-white border-white hover:bg-white hover:text-accent-foreground">
                 <Link href="/contact">Volunteer</Link>
             </Button>
           </div>
