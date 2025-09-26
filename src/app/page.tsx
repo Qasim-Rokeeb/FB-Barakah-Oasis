@@ -19,12 +19,12 @@ export default function Home() {
       <section className="relative w-full text-white bg-gradient-to-br from-primary to-accent">
         <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 py-24 md:py-32">
-              <div className="max-w-2xl text-left">
+              <div className="max-w-3xl text-center mx-auto">
                 <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">Barakah Oasis</h1>
                 <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
                     A serene and inviting charity website to highlight causes and facilitate community support.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg" className="font-bold">
                       <Link href="/donate">Donate Now</Link>
                     </Button>
