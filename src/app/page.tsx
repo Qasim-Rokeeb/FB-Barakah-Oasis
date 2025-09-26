@@ -41,7 +41,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-primary-900">Our Mission</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-primary">Our Mission</h2>
             <p className="text-lg text-muted-foreground mb-12">
               <span className="font-bold">Barakah Oasis</span> is dedicated to serving the Ummah by providing relief, support, and sustainable solutions to Muslim communities in need. We believe in the power of collective action, inspired by Islamic principles, to bring about positive change and restore dignity.
             </p>
