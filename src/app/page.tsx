@@ -133,9 +133,14 @@ export default function Home() {
           <p className="max-w-2xl mx-auto text-lg text-primary-foreground/90 mb-8">
             Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>
-          <Button asChild size="lg" variant="secondary" className="font-bold text-foreground hover:bg-white/90">
-            <Link href="/donate">Donate Now</Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" variant="secondary" className="font-bold text-foreground hover:bg-white/90">
+                <Link href="/donate">Donate Now</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="font-bold bg-transparent text-white border-white hover:bg-white hover:text-primary">
+                <Link href="/contact">Volunteer</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
