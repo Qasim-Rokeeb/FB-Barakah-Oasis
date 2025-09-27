@@ -1,3 +1,4 @@
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { placeholderImages } from '@/lib/placeholder-images';
 import type { Cause } from '@/lib/types';
-import { formatCurrency } from '@/lib/utils';
+import { formatCurrency, trackEvent } from '@/lib/utils';
 import CauseSummary from './CauseSummary';
 import { Skeleton } from './ui/skeleton';
 
@@ -54,7 +55,7 @@ export default function CauseCard({ cause }: CauseCardProps) {
         </div>
       </CardContent>
       <CardFooter className="p-6 pt-0">
-        <Button asChild className="w-full font-bold">
+        <Button asChild className="w-full font-bold" onClick={() => trackEvent('learn_more_donate_click', { causeId: cause.id, causeTitle: cause.title, location: 'cause_card' })}>
           <Link href={`/donate?cause=${cause.id}`}>Learn More & Donate</Link>
         </Button>
       </CardFooter>

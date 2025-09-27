@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/Logo';
 import { cn } from '@/lib/utils';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { trackEvent } from '@/lib/utils';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -48,7 +49,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="hidden md:inline-flex">
+          <Button asChild className="hidden md:inline-flex" onClick={() => trackEvent('donate_button_click', { location: 'header' })}>
             <Link href="/donate">Donate Now</Link>
           </Button>
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -72,8 +73,8 @@ export function Header() {
                     <NavLink key={link.href} {...link} />
                   ))}
                 </nav>
-                <Button asChild className="mt-8 w-full">
-                  <Link href="/donate" onClick={() => setIsMobileMenuOpen(false)}>Donate Now</Link>
+                <Button asChild className="mt-8 w-full" onClick={() => { trackEvent('donate_button_click', { location: 'mobile_menu' }); setIsMobileMenuOpen(false); }}>
+                  <Link href="/donate">Donate Now</Link>
                 </Button>
               </div>
             </SheetContent>

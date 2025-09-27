@@ -1,3 +1,4 @@
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +9,7 @@ import { placeholderImages } from '@/lib/placeholder-images';
 import { causes, testimonials } from '@/lib/data';
 import CauseCard from '@/components/CauseCard';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { trackEvent } from '@/lib/utils';
 
 export default function Home() {
   const heroImage = placeholderImages.find(p => p.id === 'hero-home');
@@ -25,10 +27,10 @@ export default function Home() {
                     A serene and inviting charity website to highlight causes and facilitate community support.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild size="lg" className="font-bold">
+                    <Button asChild size="lg" className="font-bold" onClick={() => trackEvent('donate_button_click', { location: 'hero' })}>
                       <Link href="/donate">Donate Now</Link>
                     </Button>
-                    <Button asChild variant="secondary" size="lg" className="font-bold">
+                    <Button asChild variant="secondary" size="lg" className="font-bold" onClick={() => trackEvent('volunteer_button_click', { location: 'hero' })}>
                     <Link href="/contact">Volunteer</Link>
                     </Button>
                 </div>
@@ -87,7 +89,7 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline" className="font-bold">
+            <Button asChild size="lg" variant="outline" className="font-bold" onClick={() => trackEvent('view_all_causes_click')}>
               <Link href="/causes">View All Causes <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" /></Link>
             </Button>
           </div>
@@ -133,10 +135,10 @@ export default function Home() {
             Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="primary" className="font-bold">
+            <Button asChild size="lg" variant="primary" className="font-bold" onClick={() => trackEvent('donate_button_click', { location: 'cta' })}>
                 <Link href="/donate">Donate Now</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="font-bold bg-transparent text-white border-white hover:bg-white hover:text-accent-foreground">
+            <Button asChild size="lg" variant="outline" className="font-bold bg-transparent text-white border-white hover:bg-white hover:text-accent-foreground" onClick={() => trackEvent('volunteer_button_click', { location: 'cta' })}>
                 <Link href="/contact">Volunteer</Link>
             </Button>
           </div>

@@ -27,5 +27,6 @@ export async function getAllCauses(): Promise<Cause[]> {
 
 export async function getCauseById(id: string): Promise<Cause | undefined> {
   // In a real app, this would fetch from a database
+  await new Promise(resolve => setTimeout(resolve, 500)); // Simulate network latency
   return causes.find(cause => cause.id === id);
 }

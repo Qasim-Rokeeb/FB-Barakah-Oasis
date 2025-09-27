@@ -1,20 +1,36 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { getCauseById, getAllCauses } from '@/lib/actions';
 import { placeholderImages } from '@/lib/placeholder-images';
-import { formatCurrency } from '@/lib/utils';
+import { formatCurrency, trackEvent } from '@/lib/utils';
 import CauseSummary from '@/components/CauseSummary';
+import type { Cause } from '@/lib/types';
 
-export default async function CauseDetailPage({ params }: { params: { id: string } }) {
-  const cause = await getCauseById(params.id);
+export default function CauseDetailPage({ params }: { params: { id: string } }) {
+  const [cause, setCause] = useState<Cause | null>(null);
+
+  useEffect(() => {
+    async function fetchCause() {
+      const fetchedCause = await getCauseById(params.id);
+      if (!fetchedCause) {
+        notFound();
+      }
+      setCause(fetchedCause);
+    }
+    fetchCause();
+  }, [params.id]);
+
 
   if (!cause) {
-    notFound();
+    // You can return a loading state here if you want
+    return null;
   }
 
   const causeImage = placeholderImages.find(p => p.id === cause.imageId);
@@ -61,10 +77,10 @@ export default async function CauseDetailPage({ params }: { params: { id: string
                   </div>
 
                   <div className="flex flex-col gap-4">
-                    <Button asChild size="lg" className="w-full font-bold text-base">
+                    <Button asChild size="lg" className="w-full font-bold text-base" onClick={() => trackEvent('donate_button_click', { causeId: cause.id, location: 'cause_detail_card' })}>
                       <Link href={`/donate?cause=${cause.id}`}>Donate Now</Link>
                     </Button>
-                    <Button type="button" variant="outline" className="w-full font-bold" aria-label={`Share the ${cause.title} cause`}>Share</Button>
+                    <Button type="button" variant="outline" className="w-full font-bold" aria-label={`Share the ${cause.title} cause`} onClick={() => trackEvent('share_button_click', { causeId: cause.id, causeTitle: cause.title })}>Share</Button>
                   </div>
                 </CardContent>
               </Card>
@@ -85,11 +101,4 @@ export default async function CauseDetailPage({ params }: { params: { id: string
       </div>
     </div>
   );
-}
-
-export async function generateStaticParams() {
-  const causes = await getAllCauses();
-  return causes.map((cause) => ({
-    id: cause.id,
-  }));
 }
