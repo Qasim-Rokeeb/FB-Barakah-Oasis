@@ -1,10 +1,12 @@
 
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import { ScrollToTopButton } from '@/components/ScrollToTopButton';
 
 export const metadata: Metadata = {
   title: 'Barakah Oasis',
@@ -55,6 +57,7 @@ export default function RootLayout({
         <main id="main-content" className="flex-grow">{children}</main>
         <Footer />
         <Toaster />
+        <ScrollToTopButton />
       </body>
     </html>
   );
