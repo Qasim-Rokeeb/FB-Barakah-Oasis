@@ -8,7 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'Barakah Oasis',
-  description: 'A serene and inviting charity website to highlight causes and facilitate community support.',
+  description: 'Barakah Oasis is a non-profit organization dedicated to providing clean water, education, and emergency relief to communities in need. Join us to make a difference.',
 };
 
 export default function RootLayout({
