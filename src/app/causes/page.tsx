@@ -1,7 +1,12 @@
 import { causes } from '@/lib/data';
 import CauseCard from '@/components/CauseCard';
+import { getSummary } from '@/lib/actions';
 
-export default function CausesPage() {
+export default async function CausesPage() {
+  const causeSummaries = await Promise.all(
+    causes.map(cause => getSummary(cause.fullDescription))
+  );
+
   return (
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 md:py-24">
@@ -13,8 +18,8 @@ export default function CausesPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {causes.map(cause => (
-            <CauseCard key={cause.id} cause={cause} />
+          {causes.map((cause, index) => (
+            <CauseCard key={cause.id} cause={cause} summary={causeSummaries[index]} />
           ))}
         </div>
       </div>

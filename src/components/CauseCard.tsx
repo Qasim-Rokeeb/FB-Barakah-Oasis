@@ -2,21 +2,20 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Suspense } from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { placeholderImages } from '@/lib/placeholder-images';
 import type { Cause } from '@/lib/types';
 import { formatCurrency, trackEvent } from '@/lib/utils';
-import CauseSummary from './CauseSummary';
 import { Skeleton } from './ui/skeleton';
 
 type CauseCardProps = {
   cause: Cause;
+  summary: string;
 };
 
-export default function CauseCard({ cause }: CauseCardProps) {
+export default function CauseCard({ cause, summary }: CauseCardProps) {
   const causeImage = placeholderImages.find(p => p.id === cause.imageId);
   const progress = (cause.raised / cause.goal) * 100;
 
@@ -42,9 +41,9 @@ export default function CauseCard({ cause }: CauseCardProps) {
           <Link href={`/causes/${cause.id}`} className="hover:text-primary transition-colors">{cause.title}</Link>
         </CardTitle>
         <div className="text-sm text-muted-foreground mb-4">
-          <Suspense fallback={<div className="space-y-2"><Skeleton className="h-4 w-full" /><Skeleton className="h-4 w-5/6" /></div>}>
-             <CauseSummary details={cause.fullDescription} />
-          </Suspense>
+          <p className="text-sm text-muted-foreground">
+            {summary}
+          </p>
         </div>
         <div>
           <div className="flex justify-between items-baseline mb-1 text-sm">
