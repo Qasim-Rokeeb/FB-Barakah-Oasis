@@ -18,7 +18,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full text-white bg-gradient-to-br from-primary to-accent">
         <div className="relative z-10 h-full flex items-center">
-            <div className="container mx-auto px-4 py-24 md:py-32">
+            <div className="container mx-auto px-4 py-16 md:py-32">
               <div className="max-w-3xl text-center mx-auto">
                 <h1 className="tracking-[1px]">Barakah Oasis</h1>
                 <p className="text-primary-foreground/90">
