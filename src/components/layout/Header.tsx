@@ -54,7 +54,7 @@ export function Header() {
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
+                <Menu className="h-6 w-6" aria-hidden="true" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
@@ -63,7 +63,7 @@ export function Header() {
                 <div className='flex justify-between items-center mb-8'>
                     <Logo />
                     <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                        <X className="h-6 w-6" />
+                        <X className="h-6 w-6" aria-hidden="true" />
                         <span className="sr-only">Close menu</span>
                     </Button>
                 </div>

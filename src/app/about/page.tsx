@@ -34,7 +34,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 bg-primary/20 rounded-lg p-3">
-                    <Target className="h-6 w-6 text-primary" />
+                    <Target className="h-6 w-6 text-primary" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Our Mission</h3>
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 bg-primary/20 rounded-lg p-3">
-                    <Heart className="h-6 w-6 text-primary" />
+                    <Heart className="h-6 w-6 text-primary" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Our Values</h3>

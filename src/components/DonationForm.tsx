@@ -163,7 +163,7 @@ export function DonationForm() {
                     <FormLabel>Custom Amount</FormLabel>
                     <FormControl>
                       <div className="relative">
-                        <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                        <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" aria-hidden="true" />
                         <Input type="number" placeholder="Enter amount" className="pl-10" {...field} />
                       </div>
                     </FormControl>
