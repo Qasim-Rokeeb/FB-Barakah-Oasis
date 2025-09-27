@@ -1,5 +1,9 @@
 # Barakah Oasis
 
+## Screenshot
+
+![Barakah Oasis Screenshot](./screenshot.png)
+
 ## About Us
 
 Barakah Oasis is a non-profit organization dedicated to providing clean and accessible water solutions to communities in need. We believe that access to clean water is a fundamental human right and a catalyst for improving health, education, and economic opportunities.
