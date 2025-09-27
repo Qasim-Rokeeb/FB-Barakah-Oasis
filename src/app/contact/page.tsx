@@ -53,7 +53,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-bold text-lg">Phone</h3>
-                        <p className="text-muted-foreground hover:text-clay transition-colors m-0"><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        <p className="text-muted-foreground hover:text-clay transition-colors m-0 hover:underline"><a href="tel:+1234567890">+1 (234) 567-890</a></p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -62,7 +62,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-bold text-lg">Email</h3>
-                        <p className="text-muted-foreground hover:text-clay transition-colors m-0"><a href="mailto:contact@barakahoasis.org">contact@barakahoasis.org</a></p>
+                        <p className="text-muted-foreground hover:text-clay transition-colors m-0 hover:underline"><a href="mailto:contact@barakahoasis.org">contact@barakahoasis.org</a></p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">

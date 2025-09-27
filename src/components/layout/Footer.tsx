@@ -18,23 +18,23 @@ export function Footer() {
           <div>
             <h3 className="font-bold tracking-wider uppercase mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about" className="text-white/80 hover:text-clay">About Us</Link></li>
-              <li><Link href="/causes" className="text-white/80 hover:text-clay">Our Causes</Link></li>
-              <li><Link href="/contact" className="text-white/80 hover:text-clay">Contact</Link></li>
-              <li><Link href="/donate" className="text-white/80 hover:text-clay">Donate</Link></li>
+              <li><Link href="/about" className="text-white/80 hover:text-clay hover:underline">About Us</Link></li>
+              <li><Link href="/causes" className="text-white/80 hover:text-clay hover:underline">Our Causes</Link></li>
+              <li><Link href="/contact" className="text-white/80 hover:text-clay hover:underline">Contact</Link></li>
+              <li><Link href="/donate" className="text-white/80 hover:text-clay hover:underline">Donate</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-bold tracking-wider uppercase mb-4">Get In Touch</h3>
             <ul className="space-y-2 text-sm">
                  <li>
-                    <a href="mailto:contact@barakahoasis.org" className="text-white/80 hover:text-clay flex items-center gap-2">
+                    <a href="mailto:contact@barakahoasis.org" className="text-white/80 hover:text-clay hover:underline flex items-center gap-2">
                         <Mail className="h-4 w-4" aria-hidden="true" />
                         <span>contact@barakahoasis.org</span>
                     </a>
                 </li>
                  <li>
-                    <a href="tel:+1234567890" className="text-white/80 hover:text-clay flex items-center gap-2">
+                    <a href="tel:+1234567890" className="text-white/80 hover:text-clay hover:underline flex items-center gap-2">
                         <Phone className="h-4 w-4" aria-hidden="true" />
                         <span>+1 (234) 567-890</span>
                     </a>
@@ -42,8 +42,8 @@ export function Footer() {
             </ul>
              <h3 className="font-bold tracking-wider uppercase mb-4 mt-8">Legal</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="#" className="text-white/80 hover:text-clay">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-white/80 hover:text-clay">Terms of Service</Link></li>
+              <li><Link href="#" className="text-white/80 hover:text-clay hover:underline">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-white/80 hover:text-clay hover:underline">Terms of Service</Link></li>
             </ul>
           </div>
           <div>
