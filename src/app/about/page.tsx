@@ -25,7 +25,7 @@ export default function AboutPage() {
 
         {/* Vision and Mission Section */}
         <section className="mb-24">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <h2 className="text-3xl font-bold font-headline mb-4 text-primary">Our Vision</h2>
               <p className="text-muted-foreground mb-6">

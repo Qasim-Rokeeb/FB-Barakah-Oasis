@@ -16,7 +16,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
             <Card className="shadow-lg">
