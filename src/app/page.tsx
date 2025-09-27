@@ -22,7 +22,7 @@ export default function Home() {
             <div className="container mx-auto px-4 py-24 md:py-32">
               <div className="max-w-3xl text-center mx-auto">
                 <h1 className="tracking-[1px]">Barakah Oasis</h1>
-                <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
+                <p className="text-primary-foreground/90">
                     A serene and inviting charity website to highlight causes and facilitate community support.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-[800px]">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-primary">Our Mission</h2>
-            <p className="text-lg text-muted-foreground mb-12">
+            <p className="text-muted-foreground mb-12">
               <span className="font-bold">Barakah Oasis</span> is dedicated to serving the Ummah by providing relief, support, and sustainable solutions to Muslim communities in need. We believe in the power of collective action, inspired by Islamic principles, to bring about positive change and restore dignity.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Our Top Causes</h2>
-            <p className="text-lg text-muted-foreground mb-12">
+            <p className="text-muted-foreground mb-12">
               Join us in making a difference. These projects are in urgent need of your support to bring hope and change to communities.
             </p>
           </div>
@@ -115,8 +115,8 @@ export default function Home() {
                     )}
                     <blockquote className="text-muted-foreground mb-4 italic">"{testimonial.quote}"</blockquote>
                     <cite className="not-italic">
-                      <p className="font-bold">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                      <p className="font-bold m-0">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground m-0">{testimonial.location}</p>
                     </cite>
                   </CardContent>
                 </Card>
@@ -130,7 +130,7 @@ export default function Home() {
       <section className="bg-accent text-white">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Ready to Make a Change?</h2>
-          <p className="max-w-2xl mx-auto text-lg text-white/90 mb-8">
+          <p className="max-w-2xl mx-auto text-white/90">
             Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

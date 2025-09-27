@@ -9,7 +9,7 @@ export default function DonatePage() {
           <div className="text-center mb-12">
             <HandHeart className="h-16 w-16 mx-auto text-primary mb-4" />
             <h1>Make a Donation</h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-muted-foreground">
               Your generosity fuels our mission. Every contribution, no matter the size, brings hope and creates lasting change. Thank you for your support.
             </p>
           </div>

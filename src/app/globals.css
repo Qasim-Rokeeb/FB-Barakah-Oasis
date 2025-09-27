@@ -103,6 +103,11 @@
     font-size: clamp(2.25rem, 5vw, 3.75rem);
     line-height: 1.2;
   }
+  p {
+    @apply mb-4;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.7;
+  }
 }
 
 @layer utilities {

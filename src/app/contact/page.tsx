@@ -11,7 +11,7 @@ export default function ContactPage() {
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h1>Contact Us</h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-muted-foreground">
             We'd love to hear from you. Whether you have a question, a suggestion, or just want to say hello, please get in touch.
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-bold text-lg">Phone</h3>
-                        <p className="text-muted-foreground hover:text-primary transition-colors"><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        <p className="text-muted-foreground hover:text-clay transition-colors m-0"><a href="tel:+1234567890">+1 (234) 567-890</a></p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -62,7 +62,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-bold text-lg">Email</h3>
-                        <p className="text-muted-foreground hover:text-primary transition-colors"><a href="mailto:contact@barakahoasis.org">contact@barakahoasis.org</a></p>
+                        <p className="text-muted-foreground hover:text-clay transition-colors m-0"><a href="mailto:contact@barakahoasis.org">contact@barakahoasis.org</a></p>
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -71,7 +71,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-bold text-lg">Address</h3>
-                        <p className="text-muted-foreground">123 Hope Street, Compassion City, 10101, USA</p>
+                        <p className="text-muted-foreground m-0">123 Hope Street, Compassion City, 10101, USA</p>
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
               {faqs.map(faq => (
                 <AccordionItem key={faq.id} value={faq.id}>
                   <AccordionTrigger className="text-left font-bold text-lg hover:no-underline">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-base text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

@@ -38,7 +38,7 @@ export default async function CauseDetailPage({ params }: { params: { id: string
               </div>
             )}
             <h1 className="mb-6">{cause.title}</h1>
-            <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+            <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>{cause.fullDescription}</p>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default async function CauseDetailPage({ params }: { params: { id: string
                   <CardTitle className="font-headline text-xl">Summary</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <Suspense fallback={<p className="text-muted-foreground">Generating summary...</p>}>
+                  <Suspense fallback={<p className="text-muted-foreground m-0">Generating summary...</p>}>
                     <CauseSummary details={cause.fullDescription} />
                   </Suspense>
                 </CardContent>
