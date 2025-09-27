@@ -32,7 +32,7 @@ const prompt = ai.definePrompt({
   name: 'summarizeCauseDetailsPrompt',
   input: {schema: SummarizeCauseDetailsInputSchema},
   output: {schema: SummarizeCauseDetailsOutputSchema},
-  prompt: `Summarize the following cause details in a concise manner:\n\n{{{causeDetails}}}`, // Ensure Handlebars syntax is correctly used
+  prompt: `Summarize the following cause details in a concise manner:\n\n{{{causeDetails}}}`,
 });
 
 const summarizeCauseDetailsFlow = ai.defineFlow(
