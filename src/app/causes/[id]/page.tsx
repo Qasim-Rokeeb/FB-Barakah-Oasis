@@ -60,10 +60,12 @@ export default async function CauseDetailPage({ params }: { params: { id: string
                     {Math.round(progress)}% of our goal funded.
                   </div>
 
-                  <Button asChild size="lg" className="w-full font-bold text-base mb-4">
-                    <Link href={`/donate?cause=${cause.id}`}>Donate Now</Link>
-                  </Button>
-                  <Button variant="outline" className="w-full font-bold" aria-label={`Share the ${cause.title} cause`}>Share</Button>
+                  <div className="flex flex-col gap-4">
+                    <Button asChild size="lg" className="w-full font-bold text-base">
+                      <Link href={`/donate?cause=${cause.id}`}>Donate Now</Link>
+                    </Button>
+                    <Button variant="outline" className="w-full font-bold" aria-label={`Share the ${cause.title} cause`}>Share</Button>
+                  </div>
                 </CardContent>
               </Card>
 
