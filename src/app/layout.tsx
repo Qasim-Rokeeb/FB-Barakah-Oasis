@@ -1,5 +1,4 @@
 
-
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
@@ -7,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { ScrollToTopButton } from '@/components/ScrollToTopButton';
+import { ClientLayout } from '@/components/layout/ClientLayout';
 
 export const metadata: Metadata = {
   title: 'Barakah Oasis',
@@ -52,12 +52,14 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col')}>
-        <a href="#main-content" className="skip-link">Skip to main content</a>
-        <Header />
-        <main id="main-content" className="flex-grow">{children}</main>
-        <Footer />
-        <Toaster />
-        <ScrollToTopButton />
+        <ClientLayout>
+          <a href="#main-content" className="skip-link">Skip to main content</a>
+          <Header />
+          <main id="main-content" className="flex-grow">{children}</main>
+          <Footer />
+          <Toaster />
+          <ScrollToTopButton />
+        </ClientLayout>
       </body>
     </html>
   );
