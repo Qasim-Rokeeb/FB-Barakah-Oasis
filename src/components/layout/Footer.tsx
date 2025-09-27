@@ -35,13 +35,13 @@ export function Footer() {
             <h3 className="font-bold tracking-wider uppercase mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <Button type="button" variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Facebook"><Facebook className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
+                <a href="#" aria-label="Facebook" rel="noopener noreferrer"><Facebook className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
               </Button>
               <Button type="button" variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Twitter"><Twitter className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
+                <a href="#" aria-label="Twitter" rel="noopener noreferrer"><Twitter className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
               </Button>
               <Button type="button" variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Instagram"><Instagram className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
+                <a href="#" aria-label="Instagram" rel="noopener noreferrer"><Instagram className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
               </Button>
             </div>
           </div>
