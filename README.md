@@ -21,6 +21,22 @@ We achieve our mission through:
 * **Hygiene Education:** We conduct hygiene education programs to promote healthy practices and prevent waterborne diseases.
 * **Community Empowerment:** We work closely with local communities, empowering them to take ownership and maintain their water projects.
 
+## Usage
+
+To run this project locally, follow these steps:
+
+1.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+2.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+Open [http://localhost:9002](http://localhost:9002) with your browser to see the result.
+
 ## Get Involved
 
 There are many ways to support Barakah Oasis and help us bring clean water to more communities:
