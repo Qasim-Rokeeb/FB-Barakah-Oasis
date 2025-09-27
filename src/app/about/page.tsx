@@ -17,7 +17,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">About <span className="font-bold">Barakah Oasis</span></h1>
+          <h1>About <span className="font-bold">Barakah Oasis</span></h1>
           <p className="text-lg text-muted-foreground">
             Learn about our journey, our values, and the dedicated team working to make a difference in the world.
           </p>

@@ -37,7 +37,7 @@ export default async function CauseDetailPage({ params }: { params: { id: string
                 />
               </div>
             )}
-            <h1 className="text-3xl md:text-4xl font-headline font-bold mb-6">{cause.title}</h1>
+            <h1 className="mb-6">{cause.title}</h1>
             <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
               <p>{cause.fullDescription}</p>
             </div>
