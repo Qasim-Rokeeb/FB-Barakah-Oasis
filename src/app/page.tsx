@@ -16,11 +16,11 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full text-white bg-gradient-to-br from-primary to-accent">
+      <section aria-labelledby="hero-heading" className="relative w-full text-white bg-gradient-to-br from-primary to-accent">
         <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 py-16 md:py-32">
               <div className="max-w-3xl text-center mx-auto">
-                <h1 className="tracking-[1px]">Barakah Oasis</h1>
+                <h1 id="hero-heading" className="tracking-[1px]">Barakah Oasis</h1>
                 <p className="text-primary-foreground/90">
                     A serene and inviting charity website to highlight causes and facilitate community support.
                 </p>
@@ -38,10 +38,10 @@ export default function Home() {
       </section>
 
       {/* Our Mission Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section aria-labelledby="mission-heading" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 max-w-[800px]">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-primary">Our Mission</h2>
+            <h2 id="mission-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 text-primary">Our Mission</h2>
             <p className="text-muted-foreground mb-12">
               <span className="font-bold">Barakah Oasis</span> is dedicated to serving the Ummah by providing relief, support, and sustainable solutions to Muslim communities in need. We believe in the power of collective action, inspired by Islamic principles, to bring about positive change and restore dignity.
             </p>
@@ -73,10 +73,10 @@ export default function Home() {
       </section>
 
       {/* Top Causes Section */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section aria-labelledby="top-causes-heading" className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Our Top Causes</h2>
+            <h2 id="top-causes-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4">Our Top Causes</h2>
             <p className="text-muted-foreground mb-12">
               Join us in making a difference. These projects are in urgent need of your support to bring hope and change to communities.
             </p>
@@ -95,10 +95,10 @@ export default function Home() {
       </section>
       
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section aria-labelledby="testimonials-heading" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-lg mx-auto">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold mb-12">Words from the Heart</h2>
+            <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-headline font-bold mb-12">Words from the Heart</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map(testimonial => {
@@ -126,9 +126,9 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-accent text-white">
+      <section aria-labelledby="cta-heading" className="bg-accent text-white">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4">Ready to Make a Change?</h2>
+          <h2 id="cta-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4">Ready to Make a Change?</h2>
           <p className="max-w-2xl mx-auto text-white/90">
             Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>

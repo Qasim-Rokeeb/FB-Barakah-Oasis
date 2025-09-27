@@ -17,17 +17,17 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-16 md:py-24">
         {/* Page Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1>About <span className="font-bold">Barakah Oasis</span></h1>
+          <h1 id="page-title">About <span className="font-bold">Barakah Oasis</span></h1>
           <p className="text-muted-foreground">
             Learn about our journey, our values, and the dedicated team working to make a difference in the world.
           </p>
         </div>
 
         {/* Vision and Mission Section */}
-        <section className="mb-24">
+        <section className="mb-24" aria-labelledby="vision-heading">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-3xl font-bold font-headline mb-4 text-primary">Our Vision</h2>
+              <h2 id="vision-heading" className="text-3xl font-bold font-headline mb-4 text-primary">Our Vision</h2>
               <p className="text-muted-foreground mb-6">
                 We envision a world where Muslim communities are empowered and uplifted, living with dignity and hope, guided by the principles of compassion and justice in Islam.
               </p>
@@ -68,17 +68,17 @@ export default function AboutPage() {
         </section>
 
         {/* Our Story Section */}
-        <section className="mb-24 max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold font-headline mb-6">Our Story</h2>
+        <section className="mb-24 max-w-4xl mx-auto text-center" aria-labelledby="story-heading">
+          <h2 id="story-heading" className="text-3xl font-bold font-headline mb-6">Our Story</h2>
           <p className="text-muted-foreground">
             Inspired by the Islamic principles of charity (Sadaqah) and compassion (Rahmah), <span className="font-bold">Barakah Oasis</span> was founded in 2015. A small group of individuals, moved by the immense suffering they witnessed during a humanitarian trip, returned with a powerful conviction: that small, consistent acts of kindness, when multiplied, could create an "oasis" of blessings (Barakah) in the most desolate of circumstances. From delivering a few food parcels, we have grown into a global family of donors and volunteers, touching thousands of lives through diverse projects that serve the Ummah. Our core belief remains unchanged: every life has immense value, and together, we can restore hope and dignity.
           </p>
         </section>
 
         {/* Meet the Team Section */}
-        <section>
+        <section aria-labelledby="team-heading">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold font-headline mb-4">Meet Our Team</h2>
+            <h2 id="team-heading" className="text-3xl font-bold font-headline mb-4">Meet Our Team</h2>
             <p className="text-muted-foreground">
               We are a passionate group of professionals, volunteers, and community leaders dedicated to our mission.
             </p>
