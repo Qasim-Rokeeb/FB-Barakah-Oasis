@@ -1,5 +1,5 @@
 
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { Logo } from '../Logo';
 import { Button } from '../ui/button';
@@ -25,7 +25,16 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold tracking-wider uppercase mb-4">Legal</h3>
+            <h3 className="font-bold tracking-wider uppercase mb-4">Get In Touch</h3>
+            <ul className="space-y-2 text-sm">
+                 <li>
+                    <a href="mailto:contact@barakahoasis.org" className="text-white/80 hover:text-clay flex items-center gap-2">
+                        <Mail className="h-4 w-4" aria-hidden="true" />
+                        <span>contact@barakahoasis.org</span>
+                    </a>
+                </li>
+            </ul>
+             <h3 className="font-bold tracking-wider uppercase mb-4 mt-8">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="#" className="text-white/80 hover:text-clay">Privacy Policy</Link></li>
               <li><Link href="#" className="text-white/80 hover:text-clay">Terms of Service</Link></li>
