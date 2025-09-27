@@ -64,7 +64,7 @@ export default async function CauseDetailPage({ params }: { params: { id: string
                     <Button asChild size="lg" className="w-full font-bold text-base">
                       <Link href={`/donate?cause=${cause.id}`}>Donate Now</Link>
                     </Button>
-                    <Button variant="outline" className="w-full font-bold" aria-label={`Share the ${cause.title} cause`}>Share</Button>
+                    <Button type="button" variant="outline" className="w-full font-bold" aria-label={`Share the ${cause.title} cause`}>Share</Button>
                   </div>
                 </CardContent>
               </Card>
