@@ -9,6 +9,28 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'Barakah Oasis',
   description: 'Barakah Oasis is a non-profit organization dedicated to providing clean water, education, and emergency relief to communities in need. Join us to make a difference.',
+  openGraph: {
+    title: 'Barakah Oasis',
+    description: 'Sowing seeds of hope, nurturing communities with compassion.',
+    url: 'https://barakahoasis.org',
+    siteName: 'Barakah Oasis',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1502375751885-4f494926ce5c?w=1200&h=630&fit=crop',
+        width: 1200,
+        height: 630,
+        alt: 'A beautiful oasis in a desert, symbolizing hope and relief.',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Barakah Oasis',
+    description: 'Sowing seeds of hope, nurturing communities with compassion.',
+    images: ['https://images.unsplash.com/photo-1502375751885-4f494926ce5c?w=1200&h=630&fit=crop'],
+  },
 };
 
 export default function RootLayout({
