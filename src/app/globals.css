@@ -142,6 +142,10 @@
     @apply bg-background text-foreground rounded-md shadow-lg;
   }
 
+  .title-accent-border {
+    @apply border-b-4 border-accent pb-2;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

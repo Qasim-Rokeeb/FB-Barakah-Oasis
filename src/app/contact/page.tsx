@@ -79,7 +79,7 @@ export default function ContactPage() {
 
           {/* FAQ Section */}
           <div>
-            <h2 className="text-3xl font-bold font-headline mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold font-headline mb-6 title-accent-border">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map(faq => (
                 <AccordionItem key={faq.id} value={faq.id}>
