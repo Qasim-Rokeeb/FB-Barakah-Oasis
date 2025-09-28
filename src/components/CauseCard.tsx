@@ -20,7 +20,7 @@ export default function CauseCard({ cause, summary }: CauseCardProps) {
   const progress = (cause.raised / cause.goal) * 100;
 
   return (
-    <Card className="flex flex-col rounded-lg shadow-sm transition-all duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:scale-105 hover:shadow-lg">
+    <Card className="group flex flex-col rounded-lg shadow-sm transition-all duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:scale-105 hover:shadow-lg overflow-hidden">
       <CardHeader className="p-0">
         {causeImage && (
           <Link href={`/causes/${cause.id}`} aria-label={cause.title}>
@@ -30,7 +30,7 @@ export default function CauseCard({ cause, summary }: CauseCardProps) {
                 alt={cause.title}
                 data-ai-hint={causeImage.imageHint}
                 fill
-                className="object-cover rounded-t-lg"
+                className="object-cover rounded-t-lg grayscale transition-all duration-300 group-hover:grayscale-0"
               />
             </div>
           </Link>
