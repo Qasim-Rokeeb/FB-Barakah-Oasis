@@ -97,7 +97,7 @@ export default function Home() {
               Join us in making a difference. These projects are in urgent need of your support to bring hope and change to communities.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {topCauses.map((cause, index) => (
               <CauseCard key={cause.id} cause={cause} summary={topCauseSummaries[index] || cause.shortDescription} />
             ))}
