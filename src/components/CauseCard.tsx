@@ -20,7 +20,7 @@ export default function CauseCard({ cause, summary }: CauseCardProps) {
   const progress = (cause.raised / cause.goal) * 100;
 
   return (
-    <Card className="flex flex-col rounded-lg shadow-sm transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+    <Card className="flex flex-col rounded-lg shadow-sm transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
       <CardHeader className="p-0">
         {causeImage && (
           <Link href={`/causes/${cause.id}`} aria-label={cause.title}>
