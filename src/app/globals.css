@@ -106,7 +106,7 @@
   p {
     @apply mb-4;
     font-size: clamp(1rem, 2vw, 1.125rem);
-    line-height: 1.7;
+    line-height: 1.75;
   }
 }
 
