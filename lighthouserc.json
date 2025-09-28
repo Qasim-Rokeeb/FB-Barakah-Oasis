@@ -4,6 +4,9 @@
     "collect": {
       "staticDistDir": "./.next/server/app"
     },
+    "assert": {
+      "budgetsFile": "./lighthouse-budget.json"
+    },
     "upload": {
       "target": "temporary-public-storage"
     }
