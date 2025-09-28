@@ -35,7 +35,7 @@ export default function Home() {
         <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 py-16 md:py-32">
               <div className="max-w-3xl text-center mx-auto">
-                <h1 id="hero-heading" className="tracking-[1px]">Barakah Oasis</h1>
+                <h1 id="hero-heading" className="tracking-[1px] font-extrabold">Barakah Oasis</h1>
                 <p className="text-primary-foreground/90">
                     A serene and inviting charity website to highlight causes and facilitate community support.
                 </p>
