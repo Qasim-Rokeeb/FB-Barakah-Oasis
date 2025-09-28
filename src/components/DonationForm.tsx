@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useForm } from 'react-hook-form';
@@ -42,6 +43,8 @@ export function DonationForm() {
   const selectedCauseId = searchParams.get('cause') || 'general';
   const { toast } = useToast();
   const [isCustom, setIsCustom] = useState(false);
+  const [toastMessage, setToastMessage] = useState<{ title: string; description: string } | null>(null);
+
 
   const form = useForm<DonationFormValues>({
     resolver: zodResolver(donationSchema),
@@ -59,12 +62,18 @@ export function DonationForm() {
     form.setValue('cause', selectedCauseId);
   }, [selectedCauseId, form]);
 
+  useEffect(() => {
+    if (toastMessage) {
+      toast(toastMessage);
+    }
+  }, [toastMessage, toast]);
+
   function onSubmit(data: DonationFormValues) {
     const finalAmount = data.amount === 'custom' ? data.customAmount : data.amount;
     const selectedCause = causes.find(c => c.id === data.cause);
     const causeTitle = selectedCause ? selectedCause.title : 'General Fund';
     
-    toast({
+    setToastMessage({
       title: 'Thank you for your donation!',
       description: `Your generous gift of $${finalAmount} to ${causeTitle} has been processed.`,
     });
@@ -219,6 +228,14 @@ export function DonationForm() {
             <Button type="submit" className="w-full text-lg h-12 font-bold">Donate Now</Button>
           </form>
         </Form>
+        <div aria-live="polite" className="sr-only">
+          {toastMessage && (
+            <div>
+              <p>{toastMessage.title}</p>
+              <p>{toastMessage.description}</p>
+            </div>
+          )}
+        </div>
       </CardContent>
     </Card>
   );
