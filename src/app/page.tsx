@@ -37,7 +37,7 @@ export default function Home() {
             <div className="container mx-auto px-4 py-16 md:py-32">
               <div className="max-w-3xl text-center mx-auto">
                 <h1 id="hero-heading" className="tracking-[1px] font-extrabold [text-shadow:1px_1px_3px_rgba(0,0,0,0.2)]">Barakah Oasis</h1>
-                <p className="text-primary-foreground/90">
+                <p className="text-primary-foreground/90 animate-fade-in-down animation-delay-600">
                     A serene and inviting charity website to highlight causes and facilitate community support.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
