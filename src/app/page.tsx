@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section aria-labelledby="hero-heading" className="relative w-full text-white bg-gradient-to-br from-primary to-accent">
+      <section aria-labelledby="hero-heading" className="relative w-full text-primary-foreground bg-primary">
         <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 py-16 md:py-32">
               <div className="max-w-3xl text-center mx-auto">
@@ -141,10 +141,10 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section aria-labelledby="cta-heading" className="bg-accent text-white">
+      <section aria-labelledby="cta-heading" className="bg-accent text-accent-foreground">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <h2 id="cta-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4">Ready to Make a Change?</h2>
-          <p className="max-w-2xl mx-auto text-white/90">
+          <p className="max-w-2xl mx-auto text-accent-foreground/90">
             Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
