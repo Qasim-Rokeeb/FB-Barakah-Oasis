@@ -11,13 +11,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Logo />
-            <p className="mt-4 text-white/80">
+            <p className="mt-4 text-white/80 font-bold">
               Sowing seeds of hope, nurturing communities with compassion.
             </p>
           </div>
           <div>
             <h3 className="font-bold tracking-wider uppercase mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm font-bold">
               <li><Link href="/about" className="text-white/80 hover:text-clay hover:underline">About Us</Link></li>
               <li><Link href="/causes" className="text-white/80 hover:text-clay hover:underline">Our Causes</Link></li>
               <li><Link href="/contact" className="text-white/80 hover:text-clay hover:underline">Contact</Link></li>
@@ -26,7 +26,7 @@ export function Footer() {
           </div>
           <div>
             <h3 className="font-bold tracking-wider uppercase mb-4">Get In Touch</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm font-bold">
                  <li>
                     <a href="mailto:contact@barakahoasis.org" className="text-white/80 hover:text-clay hover:underline flex items-center gap-2">
                         <Mail className="h-4 w-4" aria-hidden="true" />
@@ -41,7 +41,7 @@ export function Footer() {
                 </li>
             </ul>
              <h3 className="font-bold tracking-wider uppercase mb-4 mt-8">Legal</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm font-bold">
               <li><Link href="#" className="text-white/80 hover:text-clay hover:underline">Privacy Policy</Link></li>
               <li><Link href="#" className="text-white/80 hover:text-clay hover:underline">Terms of Service</Link></li>
             </ul>
@@ -62,7 +62,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-white/20 pt-8 text-center text-sm text-white/60">
-          <p className='m-0'>&copy; {new Date().getFullYear()} <span className="font-bold">Barakah Oasis</span>. All rights reserved. A 501(c)(3) non-profit organization.</p>
+          <p className='m-0 font-bold'>&copy; {new Date().getFullYear()} <span className="font-bold">Barakah Oasis</span>. All rights reserved. A 501(c)(3) non-profit organization.</p>
         </div>
       </div>
     </footer>
