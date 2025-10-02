@@ -55,7 +55,7 @@ export default function RootLayout({
         <ClientLayout>
           <a href="#main-content" className="skip-link">Skip to main content</a>
           <Header />
-          <main id="main-content" className="flex-grow">{children}</main>
+          <main id="main-content" className="flex-grow animate-fade-in">{children}</main>
           <Footer />
           <Toaster />
           <ScrollToTopButton />
