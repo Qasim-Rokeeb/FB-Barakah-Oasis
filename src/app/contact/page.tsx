@@ -1,3 +1,4 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { faqs } from "@/lib/data";
@@ -9,14 +10,14 @@ export default function ContactPage() {
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16 md:py-24">
         {/* Page Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <h1>Contact Us</h1>
           <p className="text-muted-foreground">
             We'd love to hear from you. Whether you have a question, a suggestion, or just want to say hello, please get in touch.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 animate-fade-in">
           {/* Contact Form */}
           <div>
             <Card className="shadow-lg">

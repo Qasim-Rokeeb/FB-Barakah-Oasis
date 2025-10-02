@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* Our Mission Section */}
-      <section aria-labelledby="mission-heading" className="py-16 md:py-24 bg-background">
+      <section aria-labelledby="mission-heading" className="py-16 md:py-24 bg-background animate-fade-in">
         <div className="container mx-auto px-4 max-w-[800px]">
           <div className="text-center">
             <h2 id="mission-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 text-primary title-accent-border">Our Mission</h2>
@@ -89,7 +89,7 @@ export default function Home() {
       </section>
 
       {/* Top Causes Section */}
-      <section aria-labelledby="top-causes-heading" className="py-16 md:py-24 bg-secondary">
+      <section aria-labelledby="top-causes-heading" className="py-16 md:py-24 bg-secondary animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 id="top-causes-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 title-accent-border">Our Top Causes</h2>
@@ -111,7 +111,7 @@ export default function Home() {
       </section>
       
       {/* Testimonials Section */}
-      <section aria-labelledby="testimonials-heading" className="py-16 md:py-24 bg-background">
+      <section aria-labelledby="testimonials-heading" className="py-16 md:py-24 bg-background animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-lg mx-auto">
             <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-headline font-bold mb-12 title-accent-border">Words from the Heart</h2>
@@ -142,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section aria-labelledby="cta-heading" className="bg-accent text-accent-foreground">
+      <section aria-labelledby="cta-heading" className="bg-accent text-accent-foreground animate-fade-in">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <h2 id="cta-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 title-accent-border">Ready to Make a Change?</h2>
           <p className="max-w-2xl mx-auto text-accent-foreground/90">
