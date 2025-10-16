@@ -34,9 +34,9 @@ export function Footer() {
                     </a>
                 </li>
                  <li>
-                    <a href="tel:+1234567890" className="text-white/80 hover:text-clay hover:underline flex items-center gap-2">
+                    <a href="tel:09035501084" className="text-white/80 hover:text-clay hover:underline flex items-center gap-2">
                         <Phone className="h-4 w-4" aria-hidden="true" />
-                        <span>+1 (234) 567-890</span>
+                        <span>09035501084</span>
                     </a>
                 </li>
             </ul>
