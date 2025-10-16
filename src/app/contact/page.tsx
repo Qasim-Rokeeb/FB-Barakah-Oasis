@@ -72,7 +72,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <h3 className="font-bold text-lg">Address</h3>
-                        <p className="text-muted-foreground m-0">123 Hope Street, Compassion City, 10101, USA</p>
+                        <p className="text-muted-foreground m-0">123 Barakah Drive, Maitama, Abuja, Nigeria</p>
                     </div>
                 </div>
             </div>

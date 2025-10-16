@@ -62,7 +62,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-white/20 pt-8 text-center text-sm text-white/60">
-          <p className='m-0 font-bold'>&copy; {new Date().getFullYear()} <span className="font-bold">Barakah Oasis</span>. All rights reserved. A 501(c)(3) non-profit organization.</p>
+          <p className='m-0 font-bold'>&copy; {new Date().getFullYear()} <span className="font-bold">Barakah Oasis</span>. All rights reserved. A registered non-profit organization.</p>
         </div>
       </div>
     </footer>
