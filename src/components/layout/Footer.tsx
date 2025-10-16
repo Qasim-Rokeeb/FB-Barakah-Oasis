@@ -56,7 +56,7 @@ export function Footer() {
                 <a href="#" aria-label="Twitter" rel="noopener noreferrer"><Twitter className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
               </Button>
               <Button type="button" variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Instagram" rel="noopener noreferrer"><Instagram className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
+                <a href="https://www.instagram.com/the.barakah.oasis/?igsh=YzljYTk1ODg3Zg%3D%3D#" aria-label="Instagram" rel="noopener noreferrer"><Instagram className="h-5 w-5 text-white/80" aria-hidden="true" /></a>
               </Button>
             </div>
           </div>
