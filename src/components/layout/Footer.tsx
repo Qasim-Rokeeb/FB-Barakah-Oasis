@@ -28,9 +28,9 @@ export function Footer() {
             <h3 className="font-bold tracking-wider uppercase mb-4">Get In Touch</h3>
             <ul className="space-y-2 text-sm font-bold">
                  <li>
-                    <a href="mailto:contact@barakahoasis.org" className="text-white/80 hover:text-clay hover:underline flex items-center gap-2">
+                    <a href="mailto:barakahoasis@gmail.com" className="text-white/80 hover:text-clay hover:underline flex items-center gap-2">
                         <Mail className="h-4 w-4" aria-hidden="true" />
-                        <span>contact@barakahoasis.org</span>
+                        <span>barakahoasis@gmail.com</span>
                     </a>
                 </li>
                  <li>
