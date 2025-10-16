@@ -32,9 +32,9 @@
     },
     {
       "id": "cause-education",
-      "description": "Children sitting in an outdoor classroom, learning.",
+      "description": "Students sitting in a classroom, focused on their work.",
       "imageUrl": "https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGlsZHJlbiUyMGVkdWNhdGlvbnxlbnwwfHx8fDE3NTg3MjE2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "children education"
+      "imageHint": "students classroom"
     },
     {
       "id": "cause-food",
@@ -56,9 +56,15 @@
     },
     {
       "id": "cause-livelihood",
-      "description": "A woman working at a sewing machine provided by a livelihood program.",
-      "imageUrl": "https://images.unsplash.com/photo-1524876111514-588a6c0ee324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBzZXdpbmd8ZW58MHx8fHwxNzU4NzI4NjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman sewing"
+      "description": "An entrepreneur pitching their business idea to a small group.",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzVmMzF8MHwxfHNlYXJjaHwzfHxlbnRyZXByZW5ldXJ8ZW58MHx8fHwxNjE2NTk0NjU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "entrepreneur pitch"
+    },
+    {
+      "id": "cause-tech",
+      "description": "A person typing on a modern laptop in a focused environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzVmMzF8MHwxfHNlYXJjaHwzfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50fGVufDB8fHx8MTYxNjU5NDY1ODfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laptop code"
     },
     {
       "id": "testimonial-1",
