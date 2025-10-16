@@ -36,7 +36,7 @@ const donationSchema = z.object({
 
 type DonationFormValues = z.infer<typeof donationSchema>;
 
-const predefinedAmounts = ['25', '50', '100', '250'];
+const predefinedAmounts = ['10000', '25000', '50000', '100000'];
 
 export function DonationForm() {
   const searchParams = useSearchParams();
@@ -49,7 +49,7 @@ export function DonationForm() {
   const form = useForm<DonationFormValues>({
     resolver: zodResolver(donationSchema),
     defaultValues: {
-      amount: '50',
+      amount: '25000',
       customAmount: '',
       cause: selectedCauseId,
       firstName: '',
@@ -75,7 +75,7 @@ export function DonationForm() {
     
     setToastMessage({
       title: 'Thank you for your donation!',
-      description: `Your generous gift of $${finalAmount} to ${causeTitle} has been processed.`,
+      description: `Your generous gift of ₦${finalAmount} to ${causeTitle} has been processed.`,
     });
     console.log({ ...data, finalAmount });
     form.reset();
@@ -139,7 +139,7 @@ export function DonationForm() {
                                 ? "bg-primary/10 border-primary text-primary" 
                                 : "bg-transparent border-border hover:bg-accent"
                           )}>
-                            ${amount}
+                            ₦{Number(amount).toLocaleString()}
                           </FormLabel>
                         </FormItem>
                       ))}
@@ -172,7 +172,7 @@ export function DonationForm() {
                     <FormLabel>Custom Amount</FormLabel>
                     <FormControl>
                       <div className="relative">
-                        <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" aria-hidden="true" />
+                        <span className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" aria-hidden="true">₦</span>
                         <Input type="number" placeholder="Enter amount" className="pl-10" {...field} />
                       </div>
                     </FormControl>
