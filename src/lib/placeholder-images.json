@@ -7,6 +7,24 @@
       "imageHint": "desert oasis"
     },
     {
+      "id": "cause-mosque",
+      "description": "The interior of a beautiful, sunlit mosque.",
+      "imageUrl": "https://images.unsplash.com/photo-1588975079394-1588424268d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3NxdWUlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTg5ODQyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mosque interior"
+    },
+    {
+      "id": "cause-widows-orphans",
+      "description": "A woman sharing food with children.",
+      "imageUrl": "https://images.unsplash.com/photo-1591122709282-3d7c3eb9a3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmZWVkJTIwd2lkb3dzfGVufDB8fHx8MTc1ODk4NDI5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sharing food"
+    },
+    {
+      "id": "cause-ramadan",
+      "description": "A festive table set for an Iftar meal during Ramadan.",
+      "imageUrl": "https://images.unsplash.com/photo-1620067912443-f53856d57313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYW1hZGFuJTIwZm9vZHxlbnwwfHx8fDE3NTg5ODQzNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Ramadan food"
+    },
+    {
       "id": "cause-water",
       "description": "A child drinking clean water from a well.",
       "imageUrl": "https://images.unsplash.com/photo-1542013936693-884638332954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGVhbiUyMHdhdGVyfGVufDB8fHx8MTc1ODcyODY2OXww&ixlib=rb-4.1.0&q=80&w=1080",
