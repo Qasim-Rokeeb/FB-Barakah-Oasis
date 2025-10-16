@@ -1,3 +1,4 @@
+
 import type { Cause, Testimonial, FAQ } from './types';
 
 export const causes: Cause[] = [
@@ -35,7 +36,7 @@ export const causes: Cause[] = [
     raised: 27500,
     imageId: 'cause-water',
     shortDescription: 'Bringing clean and safe drinking water to remote villages.',
-    fullDescription: `Water is life, yet millions suffer from waterborne diseases. The Clean Water Initiative is a comprehensive project aimed at transforming communities by providing access to safe, clean drinking water. Our strategy involves drilling deep-water wells, installing hand pumps, and establishing water purification systems in areas where surface water is contaminated. By supporting this cause, you help reduce disease, improve child health, and empower women and girls who spend hours daily fetching water.`,
+    fullDescription: `The Prophet Muhammad (PBUH) said, "The best charity is giving water to drink." This initiative addresses a critical need by drilling wells and installing purification systems in arid communities. Access to clean water prevents disease, allows children to attend school, and restores dignity. Your donation is a powerful act of Sadaqah Jariyah that quenches thirst and cultivates life.`,
   },
   {
     id: 'education-for-all',
@@ -44,7 +45,7 @@ export const causes: Cause[] = [
     raised: 32000,
     imageId: 'cause-education',
     shortDescription: 'Providing books, supplies, and safe learning spaces for children.',
-    fullDescription: `Education is the key to breaking the cycle of poverty. The 'Education for All' program focuses on removing barriers to learning for children in underserved regions. We provide essential supplies such as textbooks, notebooks, and writing materials, support teacher training programs, and offer scholarships to promising students who cannot afford to continue their studies. Your donation can give a child the tools they need to build a better future.`,
+    fullDescription: `The first word of the Quran revealed was "Iqra" (Read), underscoring the immense value of knowledge in Islam. This program provides children in impoverished areas with books, school supplies, and safe learning environments. By investing in their education, you empower the next generation of the Ummah to build brighter futures for themselves and their communities.`,
   },
   {
     id: 'sustainable-livelihoods',
@@ -53,28 +54,28 @@ export const causes: Cause[] = [
     raised: 25000,
     imageId: 'cause-livelihood',
     shortDescription: 'Empowering individuals with skills and resources to earn a living.',
-    fullDescription: `Charity is not just about giving aid; it's about giving opportunity. The Sustainable Livelihoods program empowers individuals to become self-sufficient by providing them with the skills and resources they need to earn a stable income. We offer vocational training in fields like tailoring, carpentry, and agriculture, as well as providing small business grants and mentorship. Your support can fund a training course or provide the startup capital for a small enterprise, transforming a life from dependency to dignity.`,
+    fullDescription: `Islam encourages self-reliance and earning a halal livelihood. This program provides vocational training and small business grants to individuals, empowering them to support their families with dignity. By teaching skills like tailoring, farming, or IT, we help people transition from needing aid to becoming self-sufficient contributors to their communities.`,
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Abdulrahman Sadiq',
+    name: 'Ibrahim Adebayo',
     location: 'Rural Village',
     quote: 'The new well has changed everything. Our children are healthier, and my daughters can go to school instead of fetching water all day. It is a true blessing.',
     imageId: 'testimonial-1',
   },
   {
     id: '2',
-    name: 'Hadiza Aliyu',
+    name: 'Aisha Bello',
     location: 'Displaced Persons Camp',
     quote: 'When we lost everything, Barakah Oasis gave us not just food, but hope. The support we received gave us the strength to keep going.',
     imageId: 'testimonial-2',
   },
   {
     id: '3',
-    name: 'Zainab Ibrahim',
+    name: 'Fatima Lawal',
     location: 'Urban Slum',
     quote: 'Learning to sew has given me a way to provide for my family with dignity. I am grateful for the opportunity to build my own future.',
     imageId: 'testimonial-3',
@@ -95,7 +96,7 @@ export const faqs: FAQ[] = [
   {
     id: 'faq-3',
     question: 'Is my donation tax-deductible?',
-    answer: 'Barakah Oasis is a registered 501(c)(3) non-profit organization. All donations made within the United States are tax-deductible to the extent permitted by law. You will receive a receipt for your donation via email.',
+    answer: 'Barakah Oasis is a registered non-profit organization. All donations are handled in accordance with local regulations. You will receive a receipt for your donation via email for your records.',
   },
   {
     id: 'faq-4',
