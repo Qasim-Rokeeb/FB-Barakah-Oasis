@@ -5,9 +5,9 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Heart, Target, Users } from 'lucide-react';
 
 const teamMembers = [
-  { name: 'Aisha Rahman', role: 'Founder', imageId: 'testimonial-2' },
-  { name: 'Yusuf Ahmed', role: 'Manager', imageId: 'testimonial-1' },
-  { name: 'Fatima Khan', role: 'Charity Distribution Manager', imageId: 'testimonial-3' },
+  { name: 'Aisha Bello', role: 'Founder', imageId: 'testimonial-2' },
+  { name: 'Ibrahim Adebayo', role: 'Manager', imageId: 'testimonial-1' },
+  { name: 'Fatima Lawal', role: 'Charity Distribution Manager', imageId: 'testimonial-3' },
 ];
 
 export default function AboutPage() {

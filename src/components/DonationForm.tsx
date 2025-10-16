@@ -190,7 +190,7 @@ export function DonationForm() {
                     <FormItem>
                       <FormLabel>First Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Aisha" {...field} />
+                        <Input placeholder="Amina" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -201,9 +201,9 @@ export function DonationForm() {
                   name="lastName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Last Name</FormLabel>
+                      <FormLabel>Suleiman</FormLabel>
                       <FormControl>
-                        <Input placeholder="Rahman" {...field} />
+                        <Input placeholder="Suleiman" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -218,7 +218,7 @@ export function DonationForm() {
                 <FormItem>
                   <FormLabel>Email Address</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="a.rahman@example.com" {...field} />
+                    <Input type="email" placeholder="a.suleiman@example.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

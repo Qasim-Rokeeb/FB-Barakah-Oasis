@@ -60,21 +60,21 @@ export const causes: Cause[] = [
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    name: 'Ahmed Khan',
+    name: 'Abdulrahman Sadiq',
     location: 'Rural Village',
     quote: 'The new well has changed everything. Our children are healthier, and my daughters can go to school instead of fetching water all day. It is a true blessing.',
     imageId: 'testimonial-1',
   },
   {
     id: '2',
-    name: 'Fatima Al-Jamil',
+    name: 'Hadiza Aliyu',
     location: 'Displaced Persons Camp',
     quote: 'When we lost everything, Barakah Oasis gave us not just food, but hope. The support we received gave us the strength to keep going.',
     imageId: 'testimonial-2',
   },
   {
     id: '3',
-    name: 'Aisha Begum',
+    name: 'Zainab Ibrahim',
     location: 'Urban Slum',
     quote: 'Learning to sew has given me a way to provide for my family with dignity. I am grateful for the opportunity to build my own future.',
     imageId: 'testimonial-3',
