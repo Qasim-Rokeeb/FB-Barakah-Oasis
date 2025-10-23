@@ -9,10 +9,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { causes, testimonials } from '@/lib/data';
 import CauseCard from '@/components/CauseCard';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { trackEvent } from '@/lib/utils';
-import React, { useEffect, useState } from 'react';
-import { getSummary } from '@/lib/actions';
+import React from 'react';
 
 export default function Home() {
   const heroImage = placeholderImages.find(p => p.id === 'hero-home');
@@ -21,15 +19,26 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section aria-labelledby="hero-heading" className="relative w-full text-primary-foreground bg-primary">
+      <section aria-labelledby="hero-heading" className="relative w-full text-primary-foreground">
+        {heroImage && (
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            data-ai-hint={heroImage.imageHint}
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        )}
+        <div className="absolute inset-0 bg-primary/70"></div>
         <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 py-16 md:py-32">
               <div className="max-w-3xl text-center mx-auto">
-                <h1 id="hero-heading" className="tracking-[1px] font-extrabold [text-shadow:1px_1px_3px_rgba(0,0,0,0.2)]">Barakah Oasis</h1>
+                <h1 id="hero-heading" className="tracking-[1px] font-extrabold [text-shadow:1px_1px_3px_rgba(0,0,0,0.2)]">Welcome to Barakah Oasis</h1>
                 <p className="text-primary-foreground/90 animate-fade-in-down animation-delay-600">
-                    A serene and inviting charity website to highlight causes and facilitate community support.
+                    A place of blessing and community. Together, we uplift, empower, and share the Barakah with those in need.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild size="lg" className="font-bold" onClick={() => trackEvent('donate_button_click', { location: 'hero' })}>
                       <Link href="/donate">Donate Now</Link>
                     </Button>
@@ -106,26 +115,17 @@ export default function Home() {
             <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-headline font-bold mb-12 title-accent-border">Words from the Heart</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map(testimonial => {
-              const testimonialImage = placeholderImages.find(p => p.id === testimonial.imageId);
-              return (
-                <Card key={testimonial.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <CardContent className="p-6 flex flex-col items-center text-center">
-                    {testimonialImage && (
-                      <Avatar className="w-24 h-24 mb-4 border-4 border-accent">
-                        <AvatarImage src={testimonialImage.imageUrl} alt={testimonial.name} data-ai-hint={testimonialImage.imageHint} />
-                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                      </Avatar>
-                    )}
-                    <blockquote className="text-muted-foreground mb-4 italic">"{testimonial.quote}"</blockquote>
-                    <cite className="not-italic">
-                      <p className="font-bold m-0">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground m-0">{testimonial.location}</p>
-                    </cite>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {testimonials.map(testimonial => (
+              <Card key={testimonial.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+                <CardContent className="p-8 text-center flex flex-col justify-center items-center h-full">
+                  <blockquote className="text-muted-foreground mb-4 italic text-lg">"{testimonial.quote}"</blockquote>
+                  <cite className="not-italic mt-auto">
+                    <p className="font-bold text-primary m-0">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground m-0">{testimonial.location}</p>
+                  </cite>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -134,10 +134,10 @@ export default function Home() {
       <section aria-labelledby="cta-heading" className="bg-accent text-accent-foreground animate-fade-in">
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <h2 id="cta-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 title-accent-border">Ready to Make a Change?</h2>
-          <p className="max-w-2xl mx-auto text-accent-foreground/90">
+          <p className="mt-4 max-w-2xl mx-auto text-accent-foreground/90">
             Your contribution, no matter the size, has the power to transform lives. Join the <span className="font-bold">Barakah Oasis</span> family today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="primary" className="font-bold" onClick={() => trackEvent('donate_button_click', { location: 'cta' })}>
                 <Link href="/donate">Donate Now</Link>
             </Button>

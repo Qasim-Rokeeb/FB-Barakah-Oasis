@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-home",
-      "description": "A beautiful oasis in a desert, symbolizing hope and relief.",
-      "imageUrl": "https://images.unsplash.com/photo-1502375751885-4f494926ce5c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZXNlcnQlMjBvYXNpc3xlbnwwfHx8fDE3NTg3Mjg2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "desert oasis"
+      "description": "A group of happy muslim children playing outdoors.",
+      "imageUrl": "https://images.unsplash.com/photo-1629822434050-136f3a53a8ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMG11c2xpbSUyMGNvbW11bml0eXxlbnwwfHx8fDE3NTk2MjI5ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy muslim community"
     },
     {
       "id": "cause-mosque",

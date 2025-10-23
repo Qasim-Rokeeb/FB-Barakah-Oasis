@@ -1,13 +1,16 @@
 
 import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Heart, Target, Users } from 'lucide-react';
+import { Heart, Target } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 
 const teamMembers = [
-  { name: 'Aisha Bello', role: 'Founder', imageId: 'testimonial-2' },
-  { name: 'Ibrahim Adebayo', role: 'Manager', imageId: 'testimonial-1' },
-  { name: 'Fatima Lawal', role: 'Charity Distribution Manager', imageId: 'testimonial-3' },
+  { name: 'Aisha Bello', role: 'Founder & Director' },
+  { name: 'Ibrahim Adebayo', role: 'Operations Manager' },
+  { name: 'Fatima Lawal', role: 'Community Outreach Lead' },
+  { name: 'Yusuf Alabi', role: 'Finance Coordinator' },
+  { name: 'Zainab Idris', role: 'Project Manager' },
+  { name: 'Mustapha Sadiq', role: 'Volunteer Coordinator' },
 ];
 
 export default function AboutPage() {
@@ -48,8 +51,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Our Values</h3>
-                    <p className="text-muted-foreground">Compassion (Rahmah), Integrity (Amanah), Transparency (Waduh), and Empowerment (Tamkin) guide every decision we make and every project we undertake.</p>
-                  </div>
+                    <p className="text-muted-foreground">Compassion (Rahmah), Integrity (Amanah), Transparency (Waduh), and Empowerment (Tamkin) guide every decision we make and every project we undertake.</p>                  </div>
                 </div>
               </div>
             </div>
@@ -84,22 +86,15 @@ export default function AboutPage() {
               We are a passionate group of professionals, volunteers, and community leaders dedicated to our mission.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {teamMembers.map((member) => {
-              const memberImage = placeholderImages.find(p => p.id === member.imageId);
-              return (
-                <div key={member.name} className="text-center flex flex-col items-center">
-                  {memberImage && (
-                    <Avatar className="w-32 h-32 mb-4 border-4 border-accent">
-                      <AvatarImage src={memberImage.imageUrl} alt={member.name} data-ai-hint={memberImage.imageHint}/>
-                      <AvatarFallback>{member.name.substring(0, 2)}</AvatarFallback>
-                    </Avatar>
-                  )}
-                  <h3 className="font-bold text-xl">{member.name}</h3>
-                  <p className="text-primary m-0">{member.role}</p>
-                </div>
-              );
-            })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {teamMembers.map((member) => (
+              <Card key={member.name} className="text-center bg-card border-0 shadow-lg">
+                <CardContent className="p-6">
+                  <h3 className="font-bold text-xl text-primary">{member.name}</h3>
+                  <p className="text-muted-foreground m-0">{member.role}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 
