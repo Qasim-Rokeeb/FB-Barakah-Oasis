@@ -8,7 +8,7 @@ import { Progress } from '@/components/ui/progress';
 import { placeholderImages } from '@/lib/placeholder-images';
 import type { Cause } from '@/lib/types';
 import { formatCurrency, trackEvent } from '@/lib/utils';
-import { Skeleton } from './ui/skeleton';
+import { Badge } from './ui/badge';
 
 type CauseCardProps = {
   cause: Cause;
@@ -32,6 +32,9 @@ export default function CauseCard({ cause, summary }: CauseCardProps) {
                 fill
                 className="object-cover rounded-t-lg grayscale transition-all duration-300 group-hover:grayscale-0"
               />
+               {cause.status === 'completed' && (
+                <Badge className="absolute top-3 right-3" variant="secondary">Completed</Badge>
+              )}
             </div>
           </Link>
         )}
@@ -54,8 +57,8 @@ export default function CauseCard({ cause, summary }: CauseCardProps) {
         </div>
       </CardContent>
       <CardFooter className="p-6 pt-0">
-        <Button asChild className="w-full font-bold" onClick={() => trackEvent('learn_more_donate_click', { causeId: cause.id, causeTitle: cause.title, location: 'cause_card' })}>
-          <Link href={`/donate?cause=${cause.id}`}>Learn More & Donate</Link>
+        <Button asChild className="w-full font-bold" onClick={() => trackEvent('learn_more_donate_click', { causeId: cause.id, causeTitle: cause.title, location: 'cause_card' })} disabled={cause.status === 'completed'}>
+          <Link href={`/donate?cause=${cause.id}`}>{cause.status === 'completed' ? 'Campaign Ended' : 'Learn More & Donate'}</Link>
         </Button>
       </CardFooter>
     </Card>

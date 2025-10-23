@@ -6,6 +6,7 @@ export type Cause = {
   imageId: string;
   shortDescription: string;
   fullDescription: string;
+  status: 'ongoing' | 'completed';
 };
 
 export type Testimonial = {
