@@ -9,13 +9,23 @@ import { placeholderImages } from '@/lib/placeholder-images';
 import type { Cause } from '@/lib/types';
 import { formatCurrency, trackEvent } from '@/lib/utils';
 import { Badge } from './ui/badge';
+import { getSummary } from '@/lib/actions';
+import { Suspense } from 'react';
 
 type CauseCardProps = {
   cause: Cause;
-  summary: string;
 };
 
-export default function CauseCard({ cause, summary }: CauseCardProps) {
+function CauseSummary({ details }: { details: string }) {
+    const [summary, setSummary] = React.useState<string | null>(null);
+    React.useEffect(() => {
+        getSummary(details).then(setSummary);
+    }, [details]);
+
+    return <p className="text-sm text-muted-foreground">{summary || 'Loading summary...'}</p>;
+}
+
+export default function CauseCard({ cause }: CauseCardProps) {
   const causeImage = placeholderImages.find(p => p.id === cause.imageId);
   const progress = (cause.raised / cause.goal) * 100;
 
@@ -44,9 +54,9 @@ export default function CauseCard({ cause, summary }: CauseCardProps) {
           <Link href={`/causes/${cause.id}`} className="hover:text-primary transition-colors">{cause.title}</Link>
         </CardTitle>
         <div className="text-sm text-muted-foreground mb-4">
-          <p className="text-sm text-muted-foreground">
-            {summary}
-          </p>
+            <Suspense fallback={<p className="text-sm text-muted-foreground">Loading summary...</p>}>
+                <CauseSummary details={cause.fullDescription} />
+            </Suspense>
         </div>
         <div>
           <div className="flex justify-between items-baseline mb-1 text-sm">

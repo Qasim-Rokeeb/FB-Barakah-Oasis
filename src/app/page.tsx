@@ -11,23 +11,12 @@ import { causes, testimonials } from '@/lib/data';
 import CauseCard from '@/components/CauseCard';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { trackEvent } from '@/lib/utils';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { getSummary } from '@/lib/actions';
 
 export default function Home() {
   const heroImage = placeholderImages.find(p => p.id === 'hero-home');
   const topCauses = causes.slice(0, 3);
-  const [topCauseSummaries, setTopCauseSummaries] = useState<string[]>([]);
-
-  useEffect(() => {
-    async function fetchSummaries() {
-      const summaries = await Promise.all(
-        topCauses.map(cause => getSummary(cause.fullDescription))
-      );
-      setTopCauseSummaries(summaries);
-    }
-    fetchSummaries();
-  }, []);
 
   return (
     <div className="flex flex-col">
@@ -98,8 +87,8 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {topCauses.map((cause, index) => (
-              <CauseCard key={cause.id} cause={cause} summary={topCauseSummaries[index] || cause.shortDescription} />
+            {topCauses.map((cause) => (
+              <CauseCard key={cause.id} cause={cause} />
             ))}
           </div>
           <div className="text-center mt-12">
