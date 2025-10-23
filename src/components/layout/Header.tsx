@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/Logo';
 import { cn } from '@/lib/utils';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { trackEvent } from '@/lib/utils';
 
 const navLinks = [
@@ -60,6 +60,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background">
+                <SheetTitle className="sr-only">Main Menu</SheetTitle>
               <div className="flex flex-col h-full p-4">
                 <div className='flex justify-between items-center mb-8'>
                     <Logo />
