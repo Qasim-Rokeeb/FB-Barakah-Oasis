@@ -1,0 +1,53 @@
+
+{
+  "entities": {
+    "Cause": {
+      "title": "Cause",
+      "description": "A charitable cause or project.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the cause."
+        },
+        "goal": {
+          "type": "number",
+          "description": "The funding goal for the cause."
+        },
+        "raised": {
+          "type": "number",
+          "description": "The amount raised for the cause."
+        },
+        "imageId": {
+          "type": "string",
+          "description": "The ID of the image associated with the cause."
+        },
+        "shortDescription": {
+          "type": "string",
+          "description": "A short description of the cause."
+        },
+        "fullDescription": {
+          "type": "string",
+          "description": "A full description of the cause."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["ongoing", "completed"],
+          "description": "The status of the cause."
+        }
+      },
+      "required": ["title", "goal", "raised", "imageId", "shortDescription", "fullDescription", "status"]
+    }
+  },
+  "auth": {
+    "providers": []
+  },
+  "firestore": {
+    "/causes/{causeId}": {
+      "schema": {
+        "$ref": "#/entities/Cause"
+      },
+      "description": "Stores documents for individual charitable causes."
+    }
+  }
+}

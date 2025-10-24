@@ -1,0 +1,12 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read access to causes for everyone
+    match /causes/{causeId} {
+      allow read: if true;
+      allow write: if false; // Disallow client-side writes for now
+    }
+  }
+}
