@@ -1,4 +1,3 @@
-
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -58,9 +57,6 @@ export default {
         },
         clay: {
           DEFAULT: 'hsl(var(--clay))',
-        },
-        teal: {
-          DEFAULT: 'hsl(var(--teal))',
         },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
