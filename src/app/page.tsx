@@ -46,7 +46,7 @@ export default function Home() {
             priority
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-teal/40 to-primary/50"></div>
         <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 py-24 md:py-40">
               <div className="max-w-3xl text-center mx-auto">
