@@ -10,11 +10,27 @@ import { placeholderImages } from '@/lib/placeholder-images';
 import { causes, testimonials } from '@/lib/data';
 import CauseCard from '@/components/CauseCard';
 import { trackEvent } from '@/lib/utils';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+const changingTexts = [
+  "Sowing seeds of hope, nurturing communities with compassion.",
+  "A place of blessing and community. Together, we uplift and empower.",
+  "Your contribution, big or small, creates ripples of hope.",
+  "Join us in sharing the Barakah with those in need.",
+];
+
 
 export default function Home() {
   const heroImage = placeholderImages.find(p => p.id === 'hero-home');
   const topCauses = causes.slice(0, 3);
+  const [textIndex, setTextIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTextIndex((prevIndex) => (prevIndex + 1) % changingTexts.length);
+    }, 4000); // Change text every 4 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex flex-col">
@@ -30,15 +46,17 @@ export default function Home() {
             priority
           />
         )}
-        <div className="absolute inset-0 bg-primary/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/50"></div>
         <div className="relative z-10 h-full flex items-center">
-            <div className="container mx-auto px-4 py-16 md:py-32">
+            <div className="container mx-auto px-4 py-24 md:py-40">
               <div className="max-w-3xl text-center mx-auto">
-                <h1 id="hero-heading" className="tracking-[1px] font-extrabold [text-shadow:1px_1px_3px_rgba(0,0,0,0.2)]">Welcome to Barakah Oasis</h1>
-                <p className="text-primary-foreground/90 animate-fade-in-down animation-delay-600">
-                    A place of blessing and community. Together, we uplift, empower, and share the Barakah with those in need.
-                </p>
-                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <h1 id="hero-heading" className="tracking-wide font-extrabold [text-shadow:1px_1px_4px_rgba(0,0,0,0.3)] animate-fade-in">Welcome to Barakah Oasis</h1>
+                <div className="mt-4 h-14 flex items-center justify-center">
+                    <p key={textIndex} className="text-primary-foreground/90 text-lg md:text-xl animate-fade-in-down">
+                        {changingTexts[textIndex]}
+                    </p>
+                </div>
+                <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
                     <Button asChild size="lg" className="font-bold" onClick={() => trackEvent('donate_button_click', { location: 'hero' })}>
                       <Link href="/donate">Donate Now</Link>
                     </Button>
