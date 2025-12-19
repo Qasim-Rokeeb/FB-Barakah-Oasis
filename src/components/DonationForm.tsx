@@ -20,9 +20,10 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { causes } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
+import type { Cause } from '@/lib/types';
+import { getAllCauses } from '@/lib/actions';
 
 const donationSchema = z.object({
   amount: z.string().min(1, 'Please select or enter an amount.'),
@@ -48,6 +49,15 @@ export function DonationForm({ onDonation, isDialog = false }: DonationFormProps
   const { toast } = useToast();
   const [isCustom, setIsCustom] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [causes, setCauses] = useState<Cause[]>([]);
+
+  useEffect(() => {
+    async function fetchCauses() {
+      const allCauses = await getAllCauses();
+      setCauses(allCauses);
+    }
+    fetchCauses();
+  }, []);
 
   const form = useForm<DonationFormValues>({
     resolver: zodResolver(donationSchema),

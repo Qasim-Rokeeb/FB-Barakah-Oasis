@@ -6,10 +6,13 @@ import { ArrowRight, HeartHandshake, HelpingHand, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { placeholderImages } from '@/lib/placeholder-images';
-import { causes, testimonials } from '@/lib/data';
+import { testimonials } from '@/lib/data';
 import CauseCard from '@/components/CauseCard';
 import { trackEvent } from '@/lib/utils';
 import React, { useState, useEffect } from 'react';
+import { getAllCauses } from '@/lib/actions';
+import type { Cause } from '@/lib/types';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const changingTexts = [
   "Sowing seeds of hope, nurturing communities with compassion.",
@@ -21,13 +24,29 @@ const changingTexts = [
 
 export default function Home() {
   const heroImage = placeholderImages.find(p => p.id === 'hero-home');
-  const topCauses = causes.slice(0, 3);
   const [textIndex, setTextIndex] = useState(0);
+  const [topCauses, setTopCauses] = useState<Cause[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTextIndex((prevIndex) => (prevIndex + 1) % changingTexts.length);
     }, 4000); // Change text every 4 seconds
+    
+    async function fetchCauses() {
+      try {
+        setIsLoading(true);
+        const allCauses = await getAllCauses();
+        // Get top 3 ongoing causes
+        setTopCauses(allCauses.filter(c => c.status === 'ongoing').slice(0, 3));
+      } catch (error) {
+        console.error("Failed to fetch causes:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchCauses();
+
     return () => clearInterval(interval);
   }, []);
 
@@ -113,9 +132,15 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {topCauses.map((cause) => (
-              <CauseCard key={cause.id} cause={cause} />
-            ))}
+            {isLoading ? (
+              Array.from({ length: 3 }).map((_, i) => (
+                <Card key={i}><CardContent className="p-6"><Skeleton className="h-56 w-full mb-4" /><Skeleton className="h-6 w-3/4 mb-2" /><Skeleton className="h-4 w-full" /></CardContent></Card>
+              ))
+            ) : (
+              topCauses.map((cause) => (
+                <CauseCard key={cause.id} cause={cause} />
+              ))
+            )}
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline" className="font-bold" onClick={() => trackEvent('view_all_causes_click')}>

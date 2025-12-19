@@ -3,7 +3,9 @@
 
 import { summarizeCauseDetails } from '@/ai/flows/summarize-cause-details';
 import { unstable_cache as cache } from 'next/cache';
-import { Cause, causes } from './data';
+import { Cause } from './types';
+import { initializeFirebase } from '@/firebase';
+import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
 
 export const getSummary = cache(
   async (details: string): Promise<string> => {
@@ -21,13 +23,21 @@ export const getSummary = cache(
 );
 
 export async function getAllCauses(): Promise<Cause[]> {
-  // In a real app, this would fetch from a database
-  return causes;
+  const { firestore } = await initializeFirebase();
+  const causesCollection = collection(firestore, 'causes');
+  const snapshot = await getDocs(causesCollection);
+  if (snapshot.empty) {
+    return [];
+  }
+  return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Cause));
 }
 
 export async function getCauseById(id: string): Promise<Cause | undefined> {
-  // In a real app, this would fetch from a database
-  // Simulate network latency
-  await new Promise(resolve => setTimeout(resolve, 300));
-  return causes.find(cause => cause.id === id);
+  const { firestore } = await initializeFirebase();
+  const causeDocRef = doc(firestore, 'causes', id);
+  const snapshot = await getDoc(causeDocRef);
+  if (!snapshot.exists()) {
+    return undefined;
+  }
+  return { id: snapshot.id, ...snapshot.data() } as Cause;
 }

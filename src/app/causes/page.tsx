@@ -1,8 +1,9 @@
 
-import { causes } from '@/lib/data';
+import { getAllCauses } from '@/lib/actions';
 import CauseCard from '@/components/CauseCard';
 
 export default async function CausesPage() {
+  const causes = await getAllCauses();
   const ongoingCauses = causes.filter(c => c.status === 'ongoing');
   const completedCauses = causes.filter(c => c.status === 'completed');
 
