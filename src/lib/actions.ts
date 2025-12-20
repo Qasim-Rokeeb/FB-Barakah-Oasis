@@ -1,9 +1,10 @@
+
 'use server';
 
 import { summarizeCauseDetails } from '@/ai/flows/summarize-cause-details';
 import { unstable_cache as cache } from 'next/cache';
 import { Cause } from './types';
-import { getFirestoreDB } from '@/firebase/server-init';
+import { initializeFirebase } from '@/firebase';
 import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
 
 export const getSummary = cache(
@@ -21,7 +22,7 @@ export const getSummary = cache(
 );
 
 export async function getAllCauses(): Promise<Cause[]> {
-  const firestore = getFirestoreDB();
+  const { firestore } = await initializeFirebase();
   const causesCollection = collection(firestore, 'causes');
   const snapshot = await getDocs(causesCollection);
   if (snapshot.empty) {
@@ -31,7 +32,7 @@ export async function getAllCauses(): Promise<Cause[]> {
 }
 
 export async function getCauseById(id: string): Promise<Cause | undefined> {
-  const firestore = getFirestoreDB();
+  const { firestore } = await initializeFirebase();
   const causeDocRef = doc(firestore, 'causes', id);
   const snapshot = await getDoc(causeDocRef);
   if (!snapshot.exists()) {
