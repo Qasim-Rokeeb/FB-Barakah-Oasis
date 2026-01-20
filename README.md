@@ -1,4 +1,4 @@
-# Barakah Oasis
+## Barakah Oasis
 
 ## Screenshot
 
