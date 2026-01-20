@@ -29,7 +29,7 @@ export function Header() {
         href={href}
         className={cn(
           'transition-colors hover:text-primary',
-          isActive ? 'text-primary font-semibold' : 'text-muted-foreground',
+          isActive ? 'text-primary font-semibold' : 'text-foreground/60',
           className
         )}
         onClick={() => setIsMobileMenuOpen(false)}
@@ -49,7 +49,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="hidden md:inline-flex" onClick={() => trackEvent('donate_button_click', { location: 'header' })}>
+          <Button asChild variant="outline" className="hidden md:inline-flex" onClick={() => trackEvent('donate_button_click', { location: 'header' })}>
             <Link href="/donate">Donate Now</Link>
           </Button>
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>

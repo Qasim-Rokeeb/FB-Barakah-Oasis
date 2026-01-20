@@ -52,15 +52,9 @@ export default {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
         },
-        espresso: {
-          DEFAULT: 'hsl(var(--espresso))',
-        },
-        clay: {
-          DEFAULT: 'hsl(var(--clay))',
-        },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
-        ring: 'hsl(var(--clay))',
+        ring: 'hsl(var(--primary))',
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',
