@@ -50,13 +50,13 @@ export function Footer() {
             <h3 className="font-bold tracking-wider uppercase mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <Button type="button" variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Facebook" rel="noopener noreferrer"><Facebook className="h-5 w-5 text-background/80" aria-hidden="true" /></a>
+                <a href="#" aria-label="Facebook" rel="noopener noreferrer"><Facebook className="h-5 w-5 text-background/80 transition-all duration-200 ease-in-out hover:text-primary hover:scale-110" aria-hidden="true" /></a>
               </Button>
               <Button type="button" variant="ghost" size="icon" asChild>
-                <a href="#" aria-label="Twitter" rel="noopener noreferrer"><Twitter className="h-5 w-5 text-background/80" aria-hidden="true" /></a>
+                <a href="#" aria-label="Twitter" rel="noopener noreferrer"><Twitter className="h-5 w-5 text-background/80 transition-all duration-200 ease-in-out hover:text-primary hover:scale-110" aria-hidden="true" /></a>
               </Button>
               <Button type="button" variant="ghost" size="icon" asChild>
-                <a href="https://www.instagram.com/the.barakah.oasis/?igsh=YzljYTk1ODg3Zg%3D%3D#" aria-label="Instagram" rel="noopener noreferrer"><Instagram className="h-5 w-5 text-background/80" aria-hidden="true" /></a>
+                <a href="https://www.instagram.com/the.barakah.oasis/?igsh=YzljYTk1ODg3Zg%3D%3D#" aria-label="Instagram" rel="noopener noreferrer"><Instagram className="h-5 w-5 text-background/80 transition-all duration-200 ease-in-out hover:text-primary hover:scale-110" aria-hidden="true" /></a>
               </Button>
             </div>
           </div>
