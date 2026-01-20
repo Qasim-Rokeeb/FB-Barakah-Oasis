@@ -71,6 +71,24 @@
       "description": "A diverse group of smiling volunteers.",
       "imageUrl": "https://images.unsplash.com/photo-1743793174491-bcbdf1882ad5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaXZlcnNlJTIwdm9sdW50ZWVyc3xlbnwwfHx8fDE3NTg3Mjg2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "diverse volunteers"
+    },
+    {
+      "id": "approach-relief",
+      "description": "A volunteer handing out a box of supplies.",
+      "imageUrl": "https://images.unsplash.com/photo-1759411354058-9e429834f92f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhaWQlMjBkaXN0cmlidXRpb258ZW58MHx8fHwxNzY4OTA3MzA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "aid distribution"
+    },
+    {
+      "id": "approach-development",
+      "description": "People working together to plant saplings in a field.",
+      "imageUrl": "https://images.unsplash.com/photo-1531321538006-82b62d9fbb1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdXN0YWluYWJsZSUyMGRldmVsb3BtZW50fGVufDB8fHx8MTc2ODkwNzMwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sustainable development"
+    },
+    {
+      "id": "approach-empowerment",
+      "description": "A group of people in a workshop, collaborating and learning.",
+      "imageUrl": "https://images.unsplash.com/photo-1763116591141-a636e57bc442?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb21tdW5pdHklMjB3b3Jrc2hvcHxlbnwwfHx8fDE3Njg3OTkwNjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community workshop"
     }
   ]
 }

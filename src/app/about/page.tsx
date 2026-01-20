@@ -73,9 +73,17 @@ export default function AboutPage() {
         {/* Our Story Section */}
         <section className="mb-24 max-w-4xl mx-auto text-center animate-fade-in" aria-labelledby="story-heading">
           <h2 id="story-heading" className="text-3xl font-bold font-headline mb-6 title-accent-border">Our Story</h2>
-          <p className="text-muted-foreground">
-            Inspired by the Islamic principles of charity (Sadaqah) and compassion (Rahmah), <span className="font-bold">Barakah Oasis</span> was founded in 2015. A small group of individuals, moved by the immense suffering they witnessed during a humanitarian trip, returned with a powerful conviction: that small, consistent acts of kindness, when multiplied, could create an "oasis" of blessings (Barakah) in the most desolate of circumstances. From delivering a few food parcels, we have grown into a global family of donors and volunteers, touching thousands of lives through diverse projects that serve the Ummah. Our core belief remains unchanged: every life has immense value, and together, we can restore hope and dignity.
-          </p>
+          <div className="space-y-6 text-muted-foreground">
+            <p>
+              Inspired by the Islamic principles of charity (Sadaqah) and compassion (Rahmah), <span className="font-bold text-foreground">Barakah Oasis</span> was founded in 2015. It began with a small group of individuals moved by the immense suffering they witnessed during a humanitarian trip.
+            </p>
+            <p>
+              They returned with a powerful conviction: that small, consistent acts of kindness, when multiplied, could create an "oasis" of blessings (Barakah) in the most desolate of circumstances.
+            </p>
+            <p>
+              From delivering a few food parcels, we have grown into a global family of donors and volunteers, touching thousands of lives through diverse projects that serve the Ummah. Our core belief remains unchanged: every life has immense value, and together, we can restore hope and dignity.
+            </p>
+          </div>
         </section>
 
         {/* Meet the Team Section */}
