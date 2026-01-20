@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images';
-import { Heart, Target } from 'lucide-react';
+import { Heart, Target, Eye } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const teamMembers = [
@@ -26,50 +26,7 @@ export default function AboutPage() {
             Learn about our journey, our values, and the dedicated team working to make a difference in the world.
           </p>
         </div>
-
-        {/* Vision and Mission Section */}
-        <section className="mb-24 animate-fade-in" aria-labelledby="vision-heading">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 id="vision-heading" className="text-3xl font-bold font-headline mb-4 text-primary title-accent-border">Our Vision</h2>
-              <p className="text-muted-foreground mb-6 italic">
-                We envision a world where Muslim communities are empowered and uplifted, living with dignity and hope, guided by the principles of compassion and justice in Islam.
-              </p>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 bg-primary/20 rounded-lg p-3">
-                    <Target className="h-6 w-6 text-primary" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">Our Mission</h3>
-                    <p className="text-muted-foreground">To <span className="font-semibold text-foreground">serve and uplift</span> Muslim communities by providing <span className="italic">immediate relief</span> and creating <span className="italic">sustainable, long-term solutions</span> rooted in Islamic values of compassion, integrity, and service to humanity.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 bg-primary/20 rounded-lg p-3">
-                    <Heart className="h-6 w-6 text-primary" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">Our Values</h3>
-                    <p className="text-muted-foreground"><span className="font-semibold text-foreground">Compassion (Rahmah)</span>, <span className="font-semibold text-foreground">Integrity (Amanah)</span>, <span className="font-semibold text-foreground">Transparency (Waduh)</span>, and <span className="font-semibold text-foreground">Empowerment (Tamkin)</span> guide every decision we make and every project we undertake.</p>                  </div>
-                </div>
-              </div>
-            </div>
-            {visionImage && (
-              <div className="order-1 md:order-2 rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src={visionImage.imageUrl}
-                  alt={visionImage.description}
-                  data-ai-hint={visionImage.imageHint}
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-          </div>
-        </section>
-
+        
         {/* Our Story Section */}
         <section className="mb-24 max-w-4xl mx-auto text-center animate-fade-in" aria-labelledby="story-heading">
           <h2 id="story-heading" className="text-3xl font-bold font-headline mb-6 title-accent-border">Our Story</h2>
@@ -84,6 +41,77 @@ export default function AboutPage() {
               From delivering a few food parcels, we have grown into a <span className="font-semibold text-foreground">global family</span> of donors and volunteers, touching thousands of lives through diverse projects that serve the Ummah. Our core belief remains unchanged: <span className="italic">every life has immense value, and together, we can restore hope and dignity.</span>
             </p>
           </div>
+        </section>
+
+        {/* Vision and Mission Section */}
+        <section className="mb-24 animate-fade-in" aria-labelledby="vision-mission-heading">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {visionImage && (
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src={visionImage.imageUrl}
+                  alt={visionImage.description}
+                  data-ai-hint={visionImage.imageHint}
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <div>
+              <h2 id="vision-mission-heading" className="text-3xl font-bold font-headline mb-6 text-primary title-accent-border">Our Guiding Principles</h2>
+              <div className="space-y-8">
+                 <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 bg-primary/20 rounded-lg p-3">
+                    <Eye className="h-6 w-6 text-primary" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Our Vision</h3>
+                     <p className="text-muted-foreground italic m-0">
+                        We envision a world where Muslim communities are empowered and uplifted, living with dignity and hope, guided by the principles of compassion and justice in Islam.
+                     </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 bg-primary/20 rounded-lg p-3">
+                    <Target className="h-6 w-6 text-primary" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Our Mission</h3>
+                    <p className="text-muted-foreground m-0">To <span className="font-semibold text-foreground">serve and uplift</span> Muslim communities by providing <span className="italic">immediate relief</span> and creating <span className="italic">sustainable, long-term solutions</span> rooted in Islamic values of compassion, integrity, and service to humanity.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Values Section */}
+        <section className="mb-24 animate-fade-in" aria-labelledby="values-heading">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+                <h2 id="values-heading" className="text-3xl font-bold font-headline mb-4 title-accent-border">Our Core Values</h2>
+                <p className="text-muted-foreground">
+                    Our actions are guided by foundational principles rooted in Islamic tradition.
+                </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
+                <Card className="bg-card border-0 shadow-lg p-6 flex flex-col justify-center items-center">
+                    <h3 className="font-bold text-xl text-primary">Compassion</h3>
+                    <p className="text-muted-foreground m-0 text-sm">(Rahmah)</p>
+                </Card>
+                <Card className="bg-card border-0 shadow-lg p-6 flex flex-col justify-center items-center">
+                    <h3 className="font-bold text-xl text-primary">Integrity</h3>
+                    <p className="text-muted-foreground m-0 text-sm">(Amanah)</p>
+                </Card>
+                <Card className="bg-card border-0 shadow-lg p-6 flex flex-col justify-center items-center">
+                    <h3 className="font-bold text-xl text-primary">Transparency</h3>
+                    <p className="text-muted-foreground m-0 text-sm">(Waduh)</p>
+                </Card>
+                <Card className="bg-card border-0 shadow-lg p-6 flex flex-col justify-center items-center">
+                    <h3 className="font-bold text-xl text-primary">Empowerment</h3>
+                    <p className="text-muted-foreground m-0 text-sm">(Tamkin)</p>
+                </Card>
+            </div>
         </section>
 
         {/* Meet the Team Section */}
