@@ -14,11 +14,25 @@ import { getAllCauses } from '@/lib/actions';
 import type { Cause } from '@/lib/types';
 import { Skeleton } from '@/components/ui/skeleton';
 
+const dynamicTexts = [
+    "provide clean water and sanitation.",
+    "support education for all children.",
+    "deliver emergency relief with compassion.",
+    "empower communities for a better future."
+];
 
 export default function Home() {
   const heroImage = placeholderImages.find(p => p.id === 'hero-home');
   const [topCauses, setTopCauses] = useState<Cause[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [textIndex, setTextIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+        setTextIndex(prevIndex => (prevIndex + 1) % dynamicTexts.length);
+    }, 4000); // Change text every 4 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     async function fetchCauses() {
@@ -39,44 +53,50 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section aria-labelledby="hero-heading" className="bg-background">
-        <div className="container mx-auto px-4 py-24 md:py-32">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="max-w-xl text-left animate-fade-in">
-                    <h1 id="hero-heading" className="text-4xl md:text-6xl tracking-tight font-extrabold text-foreground">
-                        The global community where <span className="text-primary">compassion</span> meets <span className="text-primary">action</span>.
-                    </h1>
-                    <p className="mt-6 text-lg text-muted-foreground">
-                        We are a non-profit organization dedicated to providing clean water, education, and emergency relief to communities in need. Your contribution creates ripples of hope.
-                    </p>
-                    <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                        <Button asChild size="lg" className="font-bold" onClick={() => trackEvent('donate_button_click', { location: 'hero' })}>
-                          <Link href="/donate">Get Started</Link>
-                        </Button>
-                        <Button asChild variant="outline" size="lg" className="font-bold" onClick={() => trackEvent('volunteer_button_click', { location: 'hero' })}>
-                        <Link href="/contact">Learn More</Link>
-                        </Button>
-                    </div>
-                </div>
-                {heroImage && (
-                    <div className="flex justify-center items-center animate-fade-in animation-delay-600">
-                        <Image
-                            src={heroImage.imageUrl}
-                            alt={heroImage.description}
-                            data-ai-hint={heroImage.imageHint}
-                            width={500}
-                            height={500}
-                            className="object-contain"
-                            priority
-                        />
-                    </div>
-                )}
+      <section aria-labelledby="hero-heading" className="bg-secondary/50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-4rem)] md:min-h-[600px]">
+            <div className="max-w-xl text-left animate-fade-in">
+              <h1 id="hero-heading" className="text-4xl md:text-6xl tracking-tight font-extrabold text-foreground">
+                Join us to <span className="text-primary relative inline-block">
+                    change lives
+                    <svg className="absolute -bottom-2 left-0 w-full h-auto" viewBox="0 0 100 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 6C17.6667 3.6 68.5 -2.5 98 4" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round"/>
+                    </svg>
+                </span>
+                <br/> and build a better world.
+              </h1>
+              <div className="mt-8 text-lg text-muted-foreground h-14 md:h-auto">
+                <p key={textIndex} className="animate-fade-in">We are a global community united by Islamic values, working to {dynamicTexts[textIndex]}</p>
+              </div>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="font-bold text-lg" onClick={() => trackEvent('donate_button_click', { location: 'hero' })}>
+                  <Link href="/donate">Donate Now</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="font-bold text-lg" onClick={() => trackEvent('volunteer_button_click', { location: 'hero' })}>
+                  <Link href="/causes">Explore Causes</Link>
+                </Button>
+              </div>
             </div>
+            {heroImage && (
+                <div className="hidden lg:flex justify-center items-center animate-fade-in animation-delay-600">
+                    <Image
+                        src={heroImage.imageUrl}
+                        alt={heroImage.description}
+                        data-ai-hint={heroImage.imageHint}
+                        width={600}
+                        height={600}
+                        className="rounded-full shadow-2xl"
+                        priority
+                    />
+                </div>
+            )}
+          </div>
         </div>
       </section>
 
       {/* Our Mission Section */}
-      <section aria-labelledby="mission-heading" className="py-16 md:py-24 bg-secondary animate-fade-in">
+      <section aria-labelledby="mission-heading" className="py-16 md:py-24 bg-background animate-fade-in">
         <div className="container mx-auto px-4 max-w-[800px]">
           <div className="text-center">
             <h2 id="mission-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 text-foreground title-accent-border">Our Mission</h2>
@@ -86,21 +106,21 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
-              <div className="bg-background rounded-full p-4 mb-4">
+              <div className="bg-secondary rounded-full p-4 mb-4">
                 <HelpingHand className="h-12 w-12 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold mb-2">Provide Aid</h3>
               <p className="text-muted-foreground">Delivering essential resources like food, water, and shelter to those affected by crisis, fulfilling our duty of Sadaqah.</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="bg-background rounded-full p-4 mb-4">
-                <Leaf className="h-12 w-12 text-primary" aria-hidden="true" />
+              <div className="bg-secondary rounded-full p-4 mb-4">
+                <Leaf className="h-12 w-12 text-accent-warm" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold mb-2">Empower Futures</h3>
               <p className="text-muted-foreground">Creating long-term solutions through education and skill development, fostering self-reliance within communities.</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="bg-background rounded-full p-4 mb-4">
+              <div className="bg-secondary rounded-full p-4 mb-4">
                 <HeartHandshake className="h-12 w-12 text-primary" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold mb-2">Build Community</h3>
@@ -111,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Top Causes Section */}
-      <section aria-labelledby="top-causes-heading" className="py-16 md:py-24 bg-background animate-fade-in">
+      <section aria-labelledby="top-causes-heading" className="py-16 md:py-24 bg-secondary animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 id="top-causes-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 title-accent-border">Our Top Causes</h2>
@@ -139,7 +159,7 @@ export default function Home() {
       </section>
       
       {/* Testimonials Section */}
-      <section aria-labelledby="testimonials-heading" className="py-16 md:py-24 bg-secondary animate-fade-in">
+      <section aria-labelledby="testimonials-heading" className="py-16 md:py-24 bg-background animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-lg mx-auto">
             <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-headline font-bold mb-12 title-accent-border">Words from the Heart</h2>
