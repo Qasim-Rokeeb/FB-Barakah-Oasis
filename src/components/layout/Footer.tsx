@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Logo />
-            <p className="mt-4 text-background/80 font-bold">
+            <p className="mt-4 text-background/80 font-bold italic">
               Sowing seeds of hope, nurturing communities with compassion.
             </p>
           </div>

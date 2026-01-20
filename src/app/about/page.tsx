@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
               <h2 id="vision-heading" className="text-3xl font-bold font-headline mb-4 text-primary title-accent-border">Our Vision</h2>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground mb-6 italic">
                 We envision a world where Muslim communities are empowered and uplifted, living with dignity and hope, guided by the principles of compassion and justice in Islam.
               </p>
               <div className="space-y-6">
@@ -42,7 +42,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Our Mission</h3>
-                    <p className="text-muted-foreground">To serve and uplift Muslim communities by providing immediate relief and creating sustainable, long-term solutions rooted in Islamic values of compassion, integrity, and service to humanity.</p>
+                    <p className="text-muted-foreground">To <span className="font-semibold text-foreground">serve and uplift</span> Muslim communities by providing <span className="italic">immediate relief</span> and creating <span className="italic">sustainable, long-term solutions</span> rooted in Islamic values of compassion, integrity, and service to humanity.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -51,7 +51,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg">Our Values</h3>
-                    <p className="text-muted-foreground">Compassion (Rahmah), Integrity (Amanah), Transparency (Waduh), and Empowerment (Tamkin) guide every decision we make and every project we undertake.</p>                  </div>
+                    <p className="text-muted-foreground"><span className="font-semibold text-foreground">Compassion (Rahmah)</span>, <span className="font-semibold text-foreground">Integrity (Amanah)</span>, <span className="font-semibold text-foreground">Transparency (Waduh)</span>, and <span className="font-semibold text-foreground">Empowerment (Tamkin)</span> guide every decision we make and every project we undertake.</p>                  </div>
                 </div>
               </div>
             </div>
@@ -75,13 +75,13 @@ export default function AboutPage() {
           <h2 id="story-heading" className="text-3xl font-bold font-headline mb-6 title-accent-border">Our Story</h2>
           <div className="space-y-6 text-muted-foreground">
             <p>
-              Inspired by the Islamic principles of charity (Sadaqah) and compassion (Rahmah), <span className="font-bold text-foreground">Barakah Oasis</span> was founded in 2015. It began with a small group of individuals moved by the immense suffering they witnessed during a humanitarian trip.
+              Inspired by the Islamic principles of charity (Sadaqah) and compassion (Rahmah), <span className="font-bold text-foreground">Barakah Oasis</span> was founded in 2015. It began with a small group of individuals moved by the <span className="italic">immense suffering</span> they witnessed during a humanitarian trip.
             </p>
             <p>
-              They returned with a powerful conviction: that small, consistent acts of kindness, when multiplied, could create an "oasis" of blessings (Barakah) in the most desolate of circumstances.
+              They returned with a powerful conviction: that small, consistent acts of kindness, when multiplied, could create an "oasis" of <span className="font-bold text-primary">blessings (Barakah)</span> in the most desolate of circumstances.
             </p>
             <p>
-              From delivering a few food parcels, we have grown into a global family of donors and volunteers, touching thousands of lives through diverse projects that serve the Ummah. Our core belief remains unchanged: every life has immense value, and together, we can restore hope and dignity.
+              From delivering a few food parcels, we have grown into a <span className="font-semibold text-foreground">global family</span> of donors and volunteers, touching thousands of lives through diverse projects that serve the Ummah. Our core belief remains unchanged: <span className="italic">every life has immense value, and together, we can restore hope and dignity.</span>
             </p>
           </div>
         </section>
