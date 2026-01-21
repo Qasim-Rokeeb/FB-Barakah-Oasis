@@ -27,7 +27,10 @@ function CauseSummary({ details }: { details: string }) {
 }
 
 export default function CauseCard({ cause }: CauseCardProps) {
-  const causeImage = placeholderImages.find(p => p.id === cause.imageId);
+  let causeImage = placeholderImages.find(p => p.id === cause.imageId);
+  if (!causeImage) {
+    causeImage = placeholderImages.find(p => p.id === 'cause-default');
+  }
   const progress = (cause.raised / cause.goal) * 100;
 
   return (

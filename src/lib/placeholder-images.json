@@ -7,6 +7,12 @@
       "imageHint": "blue sphere"
     },
     {
+      "id": "cause-default",
+      "description": "A caring adult's hand holding a child's hand, symbolizing support and care.",
+      "imageUrl": "https://images.unsplash.com/photo-1615461066159-fea095e45137?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "caring hand"
+    },
+    {
       "id": "cause-mosque",
       "description": "A stunning photo of a grand mosque at sunset.",
       "imageUrl": "https://images.unsplash.com/photo-1532664010833-3536b76a7e5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",

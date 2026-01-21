@@ -19,7 +19,10 @@ import { DonationForm } from '@/components/DonationForm';
 function CauseDetailContent({ initialCause }: { initialCause: Cause }) {
   const [cause, setCause] = useState<Cause>(initialCause);
 
-  const causeImage = placeholderImages.find(p => p.id === cause.imageId);
+  let causeImage = placeholderImages.find(p => p.id === cause.imageId);
+  if (!causeImage) {
+    causeImage = placeholderImages.find(p => p.id === 'cause-default');
+  }
   const progress = (cause.raised / cause.goal) * 100;
 
   const handleDonation = (amount: number) => {
