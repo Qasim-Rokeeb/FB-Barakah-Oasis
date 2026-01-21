@@ -7,7 +7,8 @@ import { useEffect, useState, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { getCauseById } from '@/lib/actions';
+import { useFirestore } from '@/firebase';
+import { doc, getDoc } from 'firebase/firestore';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { formatCurrency, trackEvent } from '@/lib/utils';
 import CauseSummary from '@/components/CauseSummary';
@@ -95,25 +96,31 @@ export default function CauseDetailPage({ params }: { params: { id: string } }) 
   const [cause, setCause] = useState<Cause | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
+  const firestore = useFirestore();
 
   useEffect(() => {
     async function fetchCause() {
+      if (!firestore) return;
       try {
         setIsLoading(true);
-        const fetchedCause = await getCauseById(params.id);
-        if (!fetchedCause) {
+        const causeDocRef = doc(firestore, 'causes', params.id);
+        const snapshot = await getDoc(causeDocRef);
+        if (!snapshot.exists()) {
           setError(true);
         } else {
-          setCause(fetchedCause);
+          setCause({ id: snapshot.id, ...snapshot.data() } as Cause);
         }
       } catch (e) {
+        console.error(e);
         setError(true);
       } finally {
         setIsLoading(false);
       }
     }
-    fetchCause();
-  }, [params.id]);
+    if (firestore) {
+      fetchCause();
+    }
+  }, [params.id, firestore]);
 
   if (isLoading) {
     return <Loading />;

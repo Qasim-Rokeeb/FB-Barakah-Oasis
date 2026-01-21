@@ -1,3 +1,4 @@
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,9 +8,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { testimonials } from '@/lib/data';
 import CauseCard from '@/components/CauseCard';
-import { getAllCauses } from '@/lib/actions';
 import HeroSection from '@/components/home/HeroSection';
 import ViewAllCausesButton from '@/components/home/ViewAllCausesButton';
+import { useEffect, useState } from 'react';
+import type { Cause } from '@/lib/types';
+import { useFirestore } from '@/firebase';
+import { collection, getDocs, query, where, limit } from 'firebase/firestore';
 
 const approachItems = [
   {
@@ -32,9 +36,24 @@ const approachItems = [
   },
 ];
 
-export default async function Home() {
-  const allCauses = await getAllCauses();
-  const topCauses = allCauses.filter(c => c.status === 'ongoing').slice(0, 3);
+export default function Home() {
+  const [topCauses, setTopCauses] = useState<Cause[]>([]);
+  const firestore = useFirestore();
+
+  useEffect(() => {
+    async function fetchCauses() {
+      if (!firestore) return;
+      const causesCollection = collection(firestore, 'causes');
+      const q = query(causesCollection, where('status', '==', 'ongoing'), limit(3));
+      const snapshot = await getDocs(q);
+      if (!snapshot.empty) {
+        const causes = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Cause));
+        setTopCauses(causes);
+      }
+    }
+    fetchCauses();
+  }, [firestore]);
+
 
   return (
     <div className="flex flex-col">

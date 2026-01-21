@@ -1,11 +1,39 @@
+'use client';
 
-import { getAllCauses } from '@/lib/actions';
 import CauseCard from '@/components/CauseCard';
+import { useEffect, useState } from 'react';
+import { useFirestore } from '@/firebase';
+import { collection, getDocs } from 'firebase/firestore';
+import type { Cause } from '@/lib/types';
+import Loading from './loading';
 
-export default async function CausesPage() {
-  const causes = await getAllCauses();
+export default function CausesPage() {
+  const [causes, setCauses] = useState<Cause[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const firestore = useFirestore();
+
+  useEffect(() => {
+    async function fetchCauses() {
+      if (!firestore) return;
+      setIsLoading(true);
+      const causesCollection = collection(firestore, 'causes');
+      const snapshot = await getDocs(causesCollection);
+      if (!snapshot.empty) {
+        const allCauses = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Cause));
+        setCauses(allCauses);
+      }
+      setIsLoading(false);
+    }
+    fetchCauses();
+  }, [firestore]);
+
+
   const ongoingCauses = causes.filter(c => c.status === 'ongoing');
   const completedCauses = causes.filter(c => c.status === 'completed');
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="bg-background">
