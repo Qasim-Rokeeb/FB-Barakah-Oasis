@@ -10,28 +10,30 @@ export function ClientLayout({
 }>) {
   useEffect(() => {
     const handleAnchorClick = (event: MouseEvent) => {
-      const target = event.target as HTMLAnchorElement;
-      const href = target.getAttribute('href');
+      const target = event.target as HTMLElement;
+      // Find the closest anchor link to the element that was clicked
+      const anchor = target.closest('a[href^="#"]');
 
-      if (href && href.startsWith('#')) {
-        event.preventDefault();
-        const element = document.querySelector(href);
-        if (element) {
-          element.scrollIntoView({
-            behavior: 'smooth',
-          });
+      if (anchor) {
+        const href = anchor.getAttribute('href');
+        // Ensure it's a valid on-page link
+        if (href && href.startsWith('#')) {
+          event.preventDefault();
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+            });
+          }
         }
       }
     };
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', handleAnchorClick as EventListener);
-    });
+    
+    // Use event delegation for better performance and to handle dynamically added links
+    document.addEventListener('click', handleAnchorClick);
 
     return () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.removeEventListener('click', handleAnchorClick as EventListener);
-      });
+      document.removeEventListener('click', handleAnchorClick);
     };
   }, []);
   
