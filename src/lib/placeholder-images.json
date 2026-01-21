@@ -8,39 +8,39 @@
     },
     {
       "id": "cause-mosque",
-      "description": "The interior of a beautiful, sunlit mosque.",
-      "imageUrl": "https://images.unsplash.com/photo-1588975079394-1588424268d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3NxdWUlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTg5ODQyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mosque interior"
+      "description": "A stunning photo of a grand mosque at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1532664010833-3536b76a7e5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "mosque sunset"
     },
     {
       "id": "cause-widows-orphans",
-      "description": "A woman sharing food with children.",
-      "imageUrl": "https://images.unsplash.com/photo-1591122709282-3d7c3eb9a3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmZWVkJTIwd2lkb3dzfGVufDB8fHx8MTc1ODk4NDI5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "sharing food"
+      "description": "A caring adult's hand holding a child's hand, symbolizing support and care.",
+      "imageUrl": "https://images.unsplash.com/photo-1615461066159-fea095e45137?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "caring hand"
     },
     {
       "id": "cause-ramadan",
-      "description": "A festive table set for an Iftar meal during Ramadan.",
-      "imageUrl": "https://images.unsplash.com/photo-1620067912443-f53856d57313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyYW1hZGFuJTIwZm9vZHxlbnwwfHx8fDE3NTg5ODQzNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "Ramadan food"
+      "description": "A family sharing an Iftar meal together during Ramadan, representing community and togetherness.",
+      "imageUrl": "https://images.unsplash.com/photo-1621888642992-96b6d510b6f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "iftar meal"
     },
     {
       "id": "cause-education",
-      "description": "Students sitting in a classroom, focused on their work.",
-      "imageUrl": "https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGlsZHJlbiUyMGVkdWNhdGlvbnxlbnwwfHx8fDE3NTg3MjE2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "students classroom"
+      "description": "A young child smiling while reading a book in a library.",
+      "imageUrl": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "child reading"
     },
     {
       "id": "cause-livelihood",
-      "description": "An entrepreneur pitching their business idea to a small group.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzVmMzF8MHwxfHNlYXJjaHwzfHxlbnRyZXByZW5ldXJ8ZW58MHx8fHwxNjE2NTk0NjU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "entrepreneur pitch"
+      "description": "A person learning the skill of tailoring on a sewing machine.",
+      "imageUrl": "https://images.unsplash.com/photo-1621282692291-a58940248270?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "learning tailoring"
     },
     {
       "id": "cause-tech",
-      "description": "A person typing on a modern laptop in a focused environment.",
-      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzVmMzF8MHwxfHNlYXJjaHwzfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50fGVufDB8fHx8MTYxNjU5NDY1ODfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "laptop code"
+      "description": "A diverse group of students collaborating in a coding class.",
+      "imageUrl": "https://images.unsplash.com/photo-1528901166007-3784c7dd3653?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageHint": "coding class"
     },
     {
       "id": "testimonial-1",
