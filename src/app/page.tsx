@@ -117,7 +117,7 @@ export default function Home() {
       </section>
       
       {/* Our Approach Section */}
-      <section aria-labelledby="approach-heading" className="py-16 md:py-24 bg-background">
+      <section aria-labelledby="approach-heading" className="py-16 md:py-24 bg-background animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 id="approach-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 text-foreground title-accent-border">Our Approach</h2>
@@ -173,7 +173,7 @@ export default function Home() {
       </section>
       
       {/* How you can help section */}
-      <section aria-labelledby="help-heading" className="py-16 md:py-24 bg-background">
+      <section aria-labelledby="help-heading" className="py-16 md:py-24 bg-background animate-fade-in">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h2 id="help-heading" className="text-3xl md:text-4xl font-headline font-bold mb-4 title-accent-border">Join Us in Creating an Oasis of Hope</h2>
