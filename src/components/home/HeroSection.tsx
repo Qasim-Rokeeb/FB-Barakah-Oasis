@@ -29,8 +29,8 @@ export default function HeroSection() {
   return (
     <section aria-labelledby="hero-heading" className="bg-gradient-to-br from-primary/10 via-background to-background">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-4rem)] md:min-h-[600px] py-12 md:py-0">
-          <div className="max-w-xl text-left animate-fade-in">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-4rem)] md:min-h-[600px] py-24 md:py-0">
+          <div className="max-w-xl text-center lg:text-left animate-fade-in mx-auto">
             <h1 id="hero-heading" className="text-4xl md:text-6xl tracking-tight font-extrabold text-foreground">
               Sowing seeds of <span className="text-primary relative inline-block">
                 hope
@@ -43,7 +43,7 @@ export default function HeroSection() {
             <div className="mt-8 text-lg text-muted-foreground h-14 md:h-auto">
               <p key={textIndex} className="animate-fade-in">We are a global community united by Islamic values, working to {dynamicTexts[textIndex]}</p>
             </div>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="font-bold text-lg" onClick={() => trackEvent('donate_button_click', { location: 'hero' })}>
                 <Link href="/donate">Donate Now</Link>
               </Button>
@@ -53,14 +53,14 @@ export default function HeroSection() {
             </div>
           </div>
           {heroImage && (
-            <div className="hidden lg:flex justify-center items-center animate-fade-in animation-delay-600">
+            <div className="flex justify-center items-center animate-fade-in animation-delay-600 order-first lg:order-last">
               <Image
                 src={heroImage.imageUrl}
                 alt={heroImage.description}
                 data-ai-hint={heroImage.imageHint}
                 width={500}
                 height={500}
-                className="rounded-full shadow-2xl"
+                className="rounded-full shadow-2xl w-64 h-64 lg:w-[500px] lg:h-[500px]"
                 priority
               />
             </div>
