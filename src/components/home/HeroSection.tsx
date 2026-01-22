@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -54,15 +53,16 @@ export default function HeroSection() {
           </div>
           {heroImage && (
             <div className="flex justify-center items-center animate-fade-in animation-delay-600 order-first lg:order-last">
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                data-ai-hint={heroImage.imageHint}
-                width={500}
-                height={500}
-                className="rounded-full shadow-2xl w-64 h-64 lg:w-[500px] lg:h-[500px]"
-                priority
-              />
+                <div className="relative w-64 h-64 lg:w-[500px] lg:h-[500px]">
+                    <Image
+                        src={heroImage.imageUrl}
+                        alt={heroImage.description}
+                        data-ai-hint={heroImage.imageHint}
+                        className="rounded-full shadow-2xl object-cover"
+                        fill
+                        priority
+                    />
+                </div>
             </div>
           )}
         </div>
