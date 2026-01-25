@@ -3,14 +3,15 @@ import Image from 'next/image';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { Heart, Target, Eye } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const teamMembers = [
-  { name: 'Aisha Bello', role: 'Founder & Director' },
-  { name: 'Ibrahim Adebayo', role: 'Operations Manager' },
-  { name: 'Fatima Lawal', role: 'Community Outreach Lead' },
-  { name: 'Yusuf Alabi', role: 'Finance Coordinator' },
-  { name: 'Zainab Idris', role: 'Project Manager' },
-  { name: 'Mustapha Sadiq', role: 'Volunteer Coordinator' },
+  { name: 'Aisha Bello', role: 'Founder & Director', imageId: 'team-aisha' },
+  { name: 'Ibrahim Adebayo', role: 'Operations Manager', imageId: 'team-ibrahim' },
+  { name: 'Fatima Lawal', role: 'Community Outreach Lead', imageId: 'team-fatima' },
+  { name: 'Yusuf Alabi', role: 'Finance Coordinator', imageId: 'team-yusuf' },
+  { name: 'Zainab Idris', role: 'Project Manager', imageId: 'team-zainab' },
+  { name: 'Mustapha Sadiq', role: 'Volunteer Coordinator', imageId: 'team-mustapha' },
 ];
 
 export default function AboutPage() {
@@ -122,15 +123,24 @@ export default function AboutPage() {
               We are a passionate group of professionals, volunteers, and community leaders dedicated to our mission.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {teamMembers.map((member) => (
-              <Card key={member.name} className="text-center bg-card border-0 shadow-lg">
-                <CardContent className="p-6">
-                  <h3 className="font-bold text-xl text-primary">{member.name}</h3>
-                  <p className="text-muted-foreground m-0">{member.role}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {teamMembers.map((member) => {
+              const memberImage = placeholderImages.find(p => p.id === member.imageId);
+              return (
+                <Card key={member.name} className="text-center bg-card border-0 shadow-lg overflow-hidden">
+                  <CardContent className="p-6 flex flex-col items-center">
+                    {memberImage && (
+                      <Avatar className="w-32 h-32 mb-4 border-4 border-primary/10">
+                        <AvatarImage src={memberImage.imageUrl} alt={member.name} className="object-cover" />
+                        <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                    )}
+                    <h3 className="font-bold text-xl text-primary">{member.name}</h3>
+                    <p className="text-muted-foreground m-0">{member.role}</p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </section>
 

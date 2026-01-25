@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react';
 import type { Cause } from '@/lib/types';
 import { useFirestore } from '@/firebase';
 import { collection, getDocs, query, where, limit } from 'firebase/firestore';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const approachItems = [
   {
@@ -78,7 +79,6 @@ export default function Home() {
                   </div>
                 )}
                 <CardContent className="p-6">
-                  <item.icon className="h-12 w-12 text-primary mx-auto mb-4" />
                   <h3 className="text-xl font-bold font-headline mb-2">{item.title}</h3>
                   <p className="text-muted-foreground m-0 text-sm">{item.description}</p>
                 </CardContent>
@@ -143,17 +143,26 @@ export default function Home() {
             <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-headline font-bold mb-12 title-accent-border">Words from the Heart</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map(testimonial => (
-              <Card key={testimonial.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
-                <CardContent className="p-8 text-center flex flex-col justify-center items-center h-full">
-                  <blockquote className="text-muted-foreground mb-4 italic text-lg">"{testimonial.quote}"</blockquote>
-                  <cite className="not-italic mt-auto">
-                    <p className="font-bold text-primary m-0">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground m-0">{testimonial.location}</p>
-                  </cite>
-                </CardContent>
-              </Card>
-            ))}
+            {testimonials.map(testimonial => {
+              const testimonialImage = placeholderImages.find(p => p.id === testimonial.imageId);
+              return (
+                <Card key={testimonial.id} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+                  <CardContent className="p-8 text-center flex flex-col justify-center items-center h-full">
+                    {testimonialImage && (
+                      <Avatar className="w-24 h-24 mb-6 border-4 border-primary/20">
+                        <AvatarImage src={testimonialImage.imageUrl} alt={testimonial.name} className="object-cover" />
+                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                    )}
+                    <blockquote className="text-muted-foreground mb-4 italic text-lg">"{testimonial.quote}"</blockquote>
+                    <cite className="not-italic mt-auto">
+                      <p className="font-bold text-primary m-0">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground m-0">{testimonial.location}</p>
+                    </cite>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
