@@ -11,7 +11,6 @@ import type { Cause } from '@/lib/types';
 import { formatCurrency, trackEvent } from '@/lib/utils';
 import { Badge } from './ui/badge';
 import { getSummary } from '@/lib/actions';
-import { Suspense } from 'react';
 
 type CauseCardProps = {
   cause: Cause;
@@ -58,9 +57,7 @@ export default function CauseCard({ cause }: CauseCardProps) {
           <Link href={`/causes/${cause.id}`} className="hover:text-primary transition-colors">{cause.title}</Link>
         </CardTitle>
         <div className="text-sm text-muted-foreground mb-4">
-            <Suspense fallback={<p className="text-sm text-muted-foreground">Loading summary...</p>}>
-                <CauseSummary details={cause.fullDescription} />
-            </Suspense>
+            <CauseSummary details={cause.fullDescription} />
         </div>
         <div>
           <div className="flex justify-between items-baseline mb-1 text-sm">

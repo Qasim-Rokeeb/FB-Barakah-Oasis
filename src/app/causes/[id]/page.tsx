@@ -11,10 +11,18 @@ import { useFirestore } from '@/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { placeholderImages } from '@/lib/placeholder-images';
 import { formatCurrency, trackEvent } from '@/lib/utils';
-import CauseSummary from '@/components/CauseSummary';
+import { getSummary } from '@/lib/actions';
 import type { Cause } from '@/lib/types';
 import Loading from './loading';
 import { DonationForm } from '@/components/DonationForm';
+
+function CauseSummary({ details }: { details: string }) {
+  const [summary, setSummary] = useState<string | null>(null);
+  useEffect(() => {
+    getSummary(details).then(summary => setSummary(summary));
+  }, [details]);
+  return <p className="text-sm text-muted-foreground">{summary || "Generating summary..."}</p>;
+}
 
 function CauseDetailContent({ initialCause }: { initialCause: Cause }) {
   const [cause, setCause] = useState<Cause>(initialCause);
@@ -83,9 +91,7 @@ function CauseDetailContent({ initialCause }: { initialCause: Cause }) {
               <CardTitle className="font-headline text-xl">Summary</CardTitle>
             </CardHeader>
             <CardContent>
-              <Suspense fallback={<p className="text-muted-foreground m-0">Generating summary...</p>}>
-                <CauseSummary details={cause.fullDescription} />
-              </Suspense>
+              <CauseSummary details={cause.fullDescription} />
             </CardContent>
           </Card>
         </div>
